@@ -1,13 +1,13 @@
 # gatecheck
 
-Job postings lie in their marketing copy and tell the truth in their structured data.
-"100% Remote" and "Work from anywhere" postings are routinely gated to a closed list of
-countries — invisible in the prose, deterministic in the ATS's public JSON. gatecheck reads
-that JSON directly and sorts postings into **open**, **closed** and **unknown** for one
-applicant location.
+gatecheck watches the job boards of the companies you care about, straight from their ATS,
+and catches new postings the day they're published — no aggregator delay, no paywall.
 
-The goal is not more postings. It is **zero time spent reading postings that were never open
-to you.**
+Then it answers the question the posting itself won't: is this actually open to you?
+"100% Remote" and "Work from anywhere" postings are routinely gated to a closed list of
+countries — invisible in the prose, deterministic in the ATS's public JSON. Every posting is
+sorted into **open**, **closed** or **unknown** for your location, and only the ones worth
+reading reach you.
 
 > Status: early. The storage model and the first ATS adapter (Ashby) are in place; the
 > poller, eligibility rules and Telegram digest are next.
