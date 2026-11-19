@@ -1,0 +1,568 @@
+{
+  "offers": [
+    {
+      "max_hours": 40,
+      "position": 518,
+      "location_question_visible": false,
+      "requirements": "<p><strong>Voraussetzungen</strong></p><ul><li><p>Fließendes Deutsch (mindestens C1) und gutes Englisch</p></li><li><p>Mindestens zwei Jahre Erfahrung als Syste…",
+      "translations": {
+        "de": {
+          "description": "<p>Jede Hausverwaltung, die zu uns wechselt, hat bisher anders gearbeitet: mit einem alten Verwaltungsprogramm, Ordnern voller Dokumente, einer Telefonanlage un…",
+          "title": "🇩🇪 IT-Consultant (m/w/d) – 100% Remote – Deutsch fließend",
+          "highlight": null,
+          "requirements": "<p><strong>Voraussetzungen</strong></p><ul><li><p>Fließendes Deutsch (mindestens C1) und gutes Englisch</p></li><li><p>Mindestens zwei Jahre Erfahrung als Syste…",
+          "sharing_image": null,
+          "locations_question": "Was ist dein bevorzugter Arbeitsort?",
+          "sharing_description": "Jede Hausverwaltung, die zu uns wechselt, hat bisher anders gearbeitet: mit einem alten Verwaltungsprogramm, Ordnern voller Dokumente, einer Telefonanlage und e…",
+          "sharing_title": "🇩🇪 IT-Consultant (m/w/d) – 100% Remote – Deutsch fließend"
+        }
+      },
+      "close_at": null,
+      "salary": {
+        "max": "3000",
+        "min": "1500",
+        "period": "month",
+        "currency": "USD"
+      },
+      "title": "🇩🇪 IT-Consultant (m/w/d) – 100% Remote – Deutsch fließend",
+      "locations_question_type": "multiple_choice",
+      "on_site": false,
+      "min_hours_per_week": "40",
+      "employment_type_code": "fulltime_permanent",
+      "cover_image": null,
+      "min_hours": 40,
+      "category_code": "internet",
+      "state_name": "Bukarest",
+      "options_salutation": "off",
+      "published_at": "2026-11-18 17:11:11 UTC",
+      "options_cover_letter": "optional",
+      "tags": [],
+      "max_hours_per_week": "40",
+      "department": "IT-Projektmanagement",
+      "guid": "pud2l",
+      "experience_code": "mid_level",
+      "sharing_description": "Jede Hausverwaltung, die zu uns wechselt, hat bisher anders gearbeitet: mit einem alten Verwaltungsprogramm, Ordnern voller Dokumente, einer Telefonanlage und e…",
+      "dynamic_fields": [],
+      "postal_code": null,
+      "location": "Homeoffice",
+      "options_cv": "required",
+      "options_phone": "required",
+      "country": "Rumänien",
+      "company_name": "Powerprozesse",
+      "locations_question_required": true,
+      "sharing_image": null,
+      "country_code": "RO",
+      "open_questions": [
+        {
+          "id": 4514603,
+          "position": 1,
+          "options": {},
+          "required": true,
+          "body": "Sprichst du fließend Deutsch (mindestens C1)?",
+          "kind": "boolean",
+          "translations": {
+            "de": {
+              "body": "Sprichst du fließend Deutsch (mindestens C1)?"
+            }
+          },
+          "open_question_options": []
+        }
+      ],
+      "description": "<p>Jede Hausverwaltung, die zu uns wechselt, hat bisher anders gearbeitet: mit einem alten Verwaltungsprogramm, Ordnern voller Dokumente, einer Telefonanlage un…",
+      "careers_apply_url": "https://powerprozesse.recruitee.com/o/it-consultant-mwd-100-remote-deutsch-flieend/c/new",
+      "remote": true,
+      "highlight": null,
+      "sharing_title": "🇩🇪 IT-Consultant (m/w/d) – 100% Remote – Deutsch fließend",
+      "hybrid": false,
+      "created_at": "2026-11-18 17:11:11 UTC",
+      "id": 2832742,
+      "education_code": "professional",
+      "slug": "it-consultant-mwd-100-remote-deutsch-flieend",
+      "locations_question": "Was ist dein bevorzugter Arbeitsort?",
+      "updated_at": "2026-11-19 13:29:45 UTC",
+      "options_title": "off",
+      "mailbox_email": "job.pud2l@powerprozesse.recruitee.com",
+      "status": "published",
+      "state_code": "B",
+      "locations": [
+        {
+          "id": 284913,
+          "name": "Romania",
+          "state": "Bukarest",
+          "country": "Rumänien",
+          "city": "Bukarest",
+          "translations": {
+            "de": {
+              "name": "Romania",
+              "city": "Bukarest",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "RO",
+          "state_code": "B",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 284919,
+          "name": "Tunisia",
+          "state": "Tunis",
+          "country": "Tunesien",
+          "city": "Tunis",
+          "translations": {
+            "de": {
+              "name": "Tunisia",
+              "city": "Tunis",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "TN",
+          "state_code": "11",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 284915,
+          "name": "Morocco",
+          "state": "Rabat-Salé-Kénitra",
+          "country": "Marokko",
+          "city": "Rabat",
+          "translations": {
+            "de": {
+              "name": "Morocco",
+              "city": "Rabat",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "MA",
+          "state_code": "04",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 274153,
+          "name": "Kairo",
+          "state": "Al Qāhirah",
+          "country": "Ägypten",
+          "city": "Kairo",
+          "translations": {
+            "de": {
+              "name": "Kairo",
+              "city": "Kairo",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "EG",
+          "state_code": "C",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 284923,
+          "name": "Bulgaria",
+          "state": "Sofia",
+          "country": "Bulgarien",
+          "city": "Sofia",
+          "translations": {
+            "de": {
+              "name": "Bulgaria",
+              "city": "Sofia",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "BG",
+          "state_code": "23",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 289109,
+          "name": "Hungary",
+          "state": "Budapest",
+          "country": "Ungarn",
+          "city": "Budapest",
+          "translations": {
+            "de": {
+              "name": "Hungary",
+              "city": "Budapest",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "HU",
+          "state_code": "BU",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 289108,
+          "name": "Serbia",
+          "state": "Belgrad",
+          "country": "Serbien",
+          "city": "Belgrad",
+          "translations": {
+            "de": {
+              "name": "Serbia",
+              "city": "Belgrad",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "RS",
+          "state_code": "00",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293619,
+          "name": "Czech Republic",
+          "state": "Praha, Hlavní město",
+          "country": "Tschechien",
+          "city": "Prague",
+          "translations": {
+            "de": {
+              "name": "Czech Republic",
+              "city": "Prague",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "CZ",
+          "state_code": "10",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293624,
+          "name": "Estonia",
+          "state": "Tartu",
+          "country": "Estland",
+          "city": "Talinn",
+          "translations": {
+            "de": {
+              "name": "Estonia",
+              "city": "Talinn",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "EE",
+          "state_code": "79",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293625,
+          "name": "Kroatien",
+          "state": "Gespanschaft Zagreb",
+          "country": "Kroatien",
+          "city": "Zagreb",
+          "translations": {
+            "de": {
+              "name": "Kroatien",
+              "city": "Zagreb",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "HR",
+          "state_code": "01",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293622,
+          "name": "Latvia",
+          "state": "Rīga",
+          "country": "Lettland",
+          "city": "Riga",
+          "translations": {
+            "de": {
+              "name": "Latvia",
+              "city": "Riga",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "LV",
+          "state_code": "RIX",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293621,
+          "name": "Lithuania",
+          "state": "Vilniaus apskritis",
+          "country": "Litauen",
+          "city": "Vilnius",
+          "translations": {
+            "de": {
+              "name": "Lithuania",
+              "city": "Vilnius",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "LT",
+          "state_code": "VL",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293620,
+          "name": "Slovakia",
+          "state": "Preßburger Bezirk",
+          "country": "Slowakei",
+          "city": "Bratislava",
+          "translations": {
+            "de": {
+              "name": "Slovakia",
+              "city": "Bratislava",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "SK",
+          "state_code": "BL",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 293626,
+          "name": "Slovenia",
+          "state": "Ajdovščina",
+          "country": "Slowenien",
+          "city": "Ljubljana",
+          "translations": {
+            "de": {
+              "name": "Slovenia",
+              "city": "Ljubljana",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "SI",
+          "state_code": "001",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 308214,
+          "name": "Bosnia and Herzegovina",
+          "state": "Föderation Bosnien und Herzegowina",
+          "country": "Bosnien und Herzegowina",
+          "city": "Sarajevo",
+          "translations": {
+            "de": {
+              "name": "Bosnia and Herzegovina",
+              "city": "Sarajevo",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "BA",
+          "state_code": "BIH",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 308215,
+          "name": "Albania",
+          "state": "Tirana",
+          "country": "Albanien",
+          "city": "Tirana",
+          "translations": {
+            "de": {
+              "name": "Albania",
+              "city": "Tirana",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "AL",
+          "state_code": "11",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 308216,
+          "name": "Turkey",
+          "state": "İstanbul",
+          "country": "Türkei",
+          "city": "Istanbul",
+          "translations": {
+            "de": {
+              "name": "Turkey",
+              "city": "Istanbul",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "TR",
+          "state_code": "34",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 308218,
+          "name": "North Macedonia",
+          "state": "Veles",
+          "country": "Nordmazedonien",
+          "city": "Skopje",
+          "translations": {
+            "de": {
+              "name": "North Macedonia",
+              "city": "Skopje",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "MK",
+          "state_code": "101",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        }
+      ],
+      "careers_url": "https://powerprozesse.recruitee.com/o/it-consultant-mwd-100-remote-deutsch-flieend",
+      "city": "Bukarest",
+      "options_photo": "off"
+    },
+    {
+      "max_hours": 10,
+      "position": 511,
+      "location_question_visible": false,
+      "requirements": "<ul><li><p>Du verfügst über ein <strong>eigenes Auto</strong>, da die Post regelmäßig zur Filiale gebracht wird</p></li><li><p>Du bist <strong>körperlich fit</s…",
+      "translations": {
+        "de": {
+          "description": "<p>Zur Verstärkung unseres Büros suchen wir ab sofort eine zuverlässige Unterstützung auf Minijob-Basis mit einem Umfang von etwa 6–10 Stunden pro Woche.</p><p>…",
+          "title": "Büroaushilfe Worms 520€ Minijob",
+          "highlight": null,
+          "requirements": "<ul><li><p>Du verfügst über ein <strong>eigenes Auto</strong>, da die Post regelmäßig zur Filiale gebracht wird</p></li><li><p>Du bist <strong>körperlich fit</s…",
+          "sharing_image": null,
+          "locations_question": "Was ist dein bevorzugter Arbeitsort?",
+          "sharing_description": "Zur Verstärkung unseres Büros suchen wir ab sofort eine zuverlässige Unterstützung auf Minijob-Basis mit einem Umfang von etwa 6–10 Stunden pro Woche. Zu Deinen…",
+          "sharing_title": "Büroaushilfe Worms 520€ Minijob"
+        }
+      },
+      "close_at": null,
+      "salary": {
+        "max": "520",
+        "min": null,
+        "period": null,
+        "currency": "EUR"
+      },
+      "title": "Büroaushilfe Worms 520€ Minijob",
+      "locations_question_type": "multiple_choice",
+      "on_site": true,
+      "min_hours_per_week": "6",
+      "employment_type_code": "parttime_minijob",
+      "cover_image": null,
+      "min_hours": 6,
+      "category_code": "administrative",
+      "state_name": "Rheinland-Pfalz",
+      "options_salutation": "off",
+      "published_at": "2026-11-18 06:30:46 UTC",
+      "options_cover_letter": "optional",
+      "tags": [],
+      "max_hours_per_week": "10",
+      "department": null,
+      "guid": "r64hw",
+      "experience_code": "entry_level",
+      "sharing_description": "Zur Verstärkung unseres Büros suchen wir ab sofort eine zuverlässige Unterstützung auf Minijob-Basis mit einem Umfang von etwa 6–10 Stunden pro Woche. Zu Deinen…",
+      "dynamic_fields": [],
+      "postal_code": "67547",
+      "location": "Worms, Rheinland-Pfalz, Deutschland",
+      "options_cv": "required",
+      "options_phone": "required",
+      "country": "Deutschland",
+      "company_name": "Powerprozesse",
+      "locations_question_required": true,
+      "sharing_image": null,
+      "country_code": "DE",
+      "open_questions": [],
+      "description": "<p>Zur Verstärkung unseres Büros suchen wir ab sofort eine zuverlässige Unterstützung auf Minijob-Basis mit einem Umfang von etwa 6–10 Stunden pro Woche.</p><p>…",
+      "careers_apply_url": "https://powerprozesse.recruitee.com/o/buroaushilfe-worms-520-minijob-7/c/new",
+      "remote": false,
+      "highlight": null,
+      "sharing_title": "Büroaushilfe Worms 520€ Minijob",
+      "hybrid": false,
+      "created_at": "2026-11-18 06:30:46 UTC",
+      "id": 2831370,
+      "education_code": "professional",
+      "slug": "buroaushilfe-worms-520-minijob-7",
+      "locations_question": "Was ist dein bevorzugter Arbeitsort?",
+      "updated_at": "2026-11-18 06:31:38 UTC",
+      "options_title": "off",
+      "mailbox_email": "job.r64hw@powerprozesse.recruitee.com",
+      "status": "published",
+      "state_code": "RP",
+      "locations": [
+        {
+          "id": 219856,
+          "name": "Worms",
+          "state": "Rheinland-Pfalz",
+          "country": "Deutschland",
+          "city": "Worms",
+          "translations": {
+            "de": {
+              "name": "Worms",
+              "city": "Worms",
+              "postal_code": "67547",
+              "street": "Adenauerring 1",
+              "note": null
+            }
+          },
+          "country_code": "DE",
+          "state_code": "RP",
+          "postal_code": "67547",
+          "street": "Adenauerring 1",
+          "note": null
+        }
+      ],
+      "careers_url": "https://powerprozesse.recruitee.com/o/buroaushilfe-worms-520-minijob-7",
+      "city": "Worms",
+      "options_photo": "off"
+    }
+  ]
+}

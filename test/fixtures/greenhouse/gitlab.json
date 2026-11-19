@@ -1,0 +1,209 @@
+{
+  "jobs": [
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8771512002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6509478002,
+      "location": {
+        "name": "Remote, Canada; Remote, United States"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "n/a",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8771512002,
+      "updated_at": "2026-11-06T15:25:07-05:00",
+      "requisition_id": "6918",
+      "title": "Backend Engineer, GitLab Orbit",
+      "company_name": "GitLab",
+      "first_published": "2026-10-23T18:47:07-04:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase dev…",
+      "departments": [
+        {
+          "id": 4115239002,
+          "name": "Data Engineering",
+          "child_ids": [],
+          "parent_id": 4011044002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4019551002,
+          "name": "North America",
+          "location": null,
+          "child_ids": [
+            4040901002,
+            4040904002,
+            4040902002
+          ],
+          "parent_id": null
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8928253002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6577637002,
+      "location": {
+        "name": "Remote, KSA"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "N/A",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8928253002,
+      "updated_at": "2026-11-09T13:21:42-05:00",
+      "requisition_id": "7357",
+      "title": "Professional Services Engineer - KSA",
+      "company_name": "GitLab",
+      "first_published": "2026-11-09T13:21:28-05:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase dev…",
+      "departments": [
+        {
+          "id": 4052737002,
+          "name": "Consulting Delivery",
+          "child_ids": [],
+          "parent_id": 4011049002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4019553002,
+          "name": "EMEA",
+          "location": "Turkey",
+          "child_ids": [
+            4141035002,
+            4142718002,
+            4141748002,
+            4042500002,
+            4040905002,
+            4040903002,
+            4112146002,
+            4112147002,
+            4112148002,
+            4040908002,
+            4112149002,
+            4112150002,
+            4040907002,
+            4112151002,
+            4112152002,
+            4112153002,
+            4112154002
+          ],
+          "parent_id": null
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8773546002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6510457002,
+      "location": {
+        "name": "Remote"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "n/a",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8773546002,
+      "updated_at": "2026-11-06T15:25:07-05:00",
+      "requisition_id": "6923",
+      "title": "Site Reliability Engineer, Infrastructure Platforms — UK (Intermediate to Senior Staff)",
+      "company_name": "GitLab",
+      "first_published": "2026-09-08T13:52:41-04:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase dev…",
+      "departments": [
+        {
+          "id": 4016843002,
+          "name": "Platforms Engineering",
+          "child_ids": [],
+          "parent_id": 4011044002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4019553002,
+          "name": "EMEA",
+          "location": "Turkey",
+          "child_ids": [
+            4141035002,
+            4142718002,
+            4141748002,
+            4042500002,
+            4040905002,
+            4040903002,
+            4112146002,
+            4112147002,
+            4112148002,
+            4040908002,
+            4112149002,
+            4112150002,
+            4040907002,
+            4112151002,
+            4112152002,
+            4112153002,
+            4112154002
+          ],
+          "parent_id": null
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    }
+  ],
+  "meta": {
+    "total": 3
+  }
+}

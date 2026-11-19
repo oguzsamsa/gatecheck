@@ -18,7 +18,7 @@ const CITIES: Partial<Record<CountryCode, string>> = {
     'Seattle|Austin|Boston|Chicago|Denver|Atlanta|Miami|Washington DC/Washington D.C.|Dallas|' +
     'Houston|Philadelphia|San Diego|Palo Alto|Mountain View|Menlo Park|Sunnyvale|Redwood City|' +
     'Pittsburgh|Phoenix|Salt Lake City|Minneapolis|Detroit|Raleigh|Nashville|Boulder|Ann Arbor|' +
-    'Brooklyn|Santa Monica|Oakland|Cupertino|Irvine',
+    'Brooklyn|Santa Monica|Oakland|Cupertino|Irvine|South San Francisco',
   CA: 'Toronto|Vancouver|Montreal/Montréal|Ottawa|Calgary|Edmonton',
   GB: 'London|Manchester|Edinburgh|Glasgow|Bristol|Leeds|Belfast|Cardiff',
   IE: 'Dublin|Cork|Galway',

@@ -7,6 +7,8 @@ import { contentHash } from './hash.ts';
 export interface FetchedPosting {
   raw: unknown;
   normalized: NormalizedPosting;
+  /** What the content hash covers; defaults to `raw`. */
+  fingerprint?: unknown;
 }
 
 export interface IngestResult {
@@ -34,8 +36,8 @@ export function ingestBoard(
   const result: IngestResult = { created: 0, changed: 0, closed: 0, reopened: 0 };
 
   db.transaction((tx) => {
-    for (const { raw, normalized: n } of postings) {
-      const hash = contentHash(raw);
+    for (const { raw, normalized: n, fingerprint = raw } of postings) {
+      const hash = contentHash(fingerprint);
       const fields = {
         title: n.title,
         url: n.url,

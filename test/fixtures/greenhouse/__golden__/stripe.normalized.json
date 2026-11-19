@@ -1,0 +1,88 @@
+[
+  {
+    "atsPostingId": "8286680",
+    "title": "Account Executive, Existing Business, French",
+    "url": "https://stripe.com/jobs/search?gh_jid=8286680",
+    "department": "1185 Account Executives (EMEA)",
+    "employmentType": null,
+    "postedAt": "2026-10-16T08:43:36.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "IE",
+        "region": null,
+        "city": "Dublin",
+        "raw": "Dublin"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "5601879",
+    "title": "Data Scientist",
+    "url": "https://stripe.com/jobs/search?gh_jid=5601879",
+    "department": "7112 Data Science",
+    "employmentType": null,
+    "postedAt": "2024-01-09T21:59:46.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": null,
+        "raw": "US"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "8190048",
+    "title": "Account Executive, Product Sales - Tax",
+    "url": "https://stripe.com/jobs/search?gh_jid=8190048",
+    "department": "1641 Product Sales - RFA ex Billing",
+    "employmentType": null,
+    "postedAt": "2026-09-11T21:16:20.000Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "US",
+        "region": null,
+        "city": null,
+        "raw": "US-Remote"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "8350923",
+    "title": "Partner Development Manager, Ecosystem Partnerships",
+    "url": "https://stripe.com/jobs/search?gh_jid=8350923",
+    "department": "3512 Strategic and Ecosystem Partnerships",
+    "employmentType": null,
+    "postedAt": "2026-11-06T16:27:12.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "CA",
+        "region": null,
+        "city": null,
+        "raw": "Canada Locations"
+      },
+      {
+        "kind": "office",
+        "countryCode": null,
+        "region": null,
+        "city": null,
+        "raw": "CA-Toronto"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": null,
+        "region": null,
+        "city": null,
+        "raw": "CA-Remote"
+      }
+    ],
+    "compensation": []
+  }
+]

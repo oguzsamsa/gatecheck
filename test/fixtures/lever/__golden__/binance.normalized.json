@@ -1,0 +1,95 @@
+[
+  {
+    "atsPostingId": "7c5d03b5-ce74-45b7-b38d-c46adce58047",
+    "title": "Business Compliance Manager - Payments",
+    "url": "https://jobs.lever.co/binance/7c5d03b5-ce74-45b7-b38d-c46adce58047",
+    "department": "Legal & Compliance",
+    "employmentType": "full_time",
+    "postedAt": "2026-08-04T06:17:05.174Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "SG",
+        "region": null,
+        "city": null,
+        "raw": "Asia [SG]"
+      },
+      {
+        "kind": "office",
+        "countryCode": "HK",
+        "region": null,
+        "city": null,
+        "raw": "Hong Kong"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "bf012429-3399-482d-80ad-0fb398575510",
+    "title": "Law Enforcement Specialist – UAE",
+    "url": "https://jobs.lever.co/binance/bf012429-3399-482d-80ad-0fb398575510",
+    "department": "Legal & Compliance",
+    "employmentType": "full_time",
+    "postedAt": "2026-08-19T09:20:20.297Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "AE",
+        "region": null,
+        "city": "Dubai",
+        "raw": "UAE, Dubai [AE]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "c55bcd68-325d-4349-803e-9740eedc5b33",
+    "title": "MLRO - Pakistan",
+    "url": "https://jobs.lever.co/binance/c55bcd68-325d-4349-803e-9740eedc5b33",
+    "department": "Legal & Compliance",
+    "employmentType": "full_time",
+    "postedAt": "2026-07-06T10:53:34.464Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "PK",
+        "region": null,
+        "city": "Islamabad",
+        "raw": "Pakistan, Islamabad [PK]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "da981b97-477a-4cd6-af88-797c6a7c0ea3",
+    "title": "Web/App Test Engineer",
+    "url": "https://jobs.lever.co/binance/da981b97-477a-4cd6-af88-797c6a7c0ea3",
+    "department": "Engineering",
+    "employmentType": "full_time",
+    "postedAt": "2026-07-06T04:04:10.234Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "HK",
+        "region": null,
+        "city": null,
+        "raw": "Hong Kong [HK]"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "TW",
+        "region": null,
+        "city": "Taipei",
+        "raw": "Taiwan, Taipei"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": null,
+        "region": null,
+        "city": null,
+        "raw": "Asia"
+      }
+    ],
+    "compensation": []
+  }
+]

@@ -22,6 +22,7 @@ const ALIASES: Record<string, CountryCode> = {
   wales: 'GB',
   'northern ireland': 'GB',
   uae: 'AE',
+  ksa: 'SA',
   turkey: 'TR',
   'czech republic': 'CZ',
   'republic of korea': 'KR',

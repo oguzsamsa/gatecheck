@@ -1,0 +1,88 @@
+[
+  {
+    "additionalPlain": "Spotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in yo…",
+    "additional": "<div><span style=\"font-size: 11pt;\">Spotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what yo…",
+    "categories": {
+      "commitment": "Permanent",
+      "department": "Engineering",
+      "location": "Stockholm",
+      "team": "Personalization",
+      "allLocations": [
+        "Stockholm",
+        "London"
+      ]
+    },
+    "createdAt": 1794242473651,
+    "descriptionPlain": "",
+    "description": "<p>The Personalization team makes deciding what to play next easier and more enjoyable for every listener. From Blend to Discover Weekly, we’re behind some of S…",
+    "id": "b459a23c-18bd-43f6-a8fa-2a3165c8dac7",
+    "lists": [
+      {
+        "text": "What You'll Do",
+        "content": "\n<li>Lead and grow a team of machine learning, backend, and data engineers, supporting their development and helping them deliver their best work.Shape the team…"
+      },
+      {
+        "text": "Who You Are",
+        "content": "<div>\n\n<li>You have experience managing and developing engineering teams, with a track record of helping people grow and delivering impactful results.</li>\n<li>…"
+      },
+      {
+        "text": "Where You'll Be",
+        "content": "<div>\n<div>\n\n<li>This role is based in Stockholm or London</li>\n<li>We offer you the flexibility to work where you work best! There will be some in person meeti…"
+      }
+    ],
+    "text": "Machine Learning Engineering Manager II",
+    "country": "SE",
+    "workplaceType": "remote",
+    "opening": "",
+    "openingPlain": "",
+    "descriptionBody": "<p>The Personalization team makes deciding what to play next easier and more enjoyable for every listener. From Blend to Discover Weekly, we&rsquo;re behind som…",
+    "descriptionBodyPlain": "",
+    "hostedUrl": "https://jobs.lever.co/spotify/b459a23c-18bd-43f6-a8fa-2a3165c8dac7",
+    "applyUrl": "https://jobs.lever.co/spotify/b459a23c-18bd-43f6-a8fa-2a3165c8dac7/apply"
+  },
+  {
+    "additionalPlain": "",
+    "additional": "<div>\n<p dir=\"ltr\">The United States base range for this position is 75,645 - 94,556 USD plus equity. The benefits available for this position include health in…",
+    "categories": {
+      "department": "Finance",
+      "location": "New York, NY",
+      "team": "Accounting",
+      "allLocations": [
+        "New York, NY"
+      ]
+    },
+    "createdAt": 1794565648197,
+    "descriptionPlain": "",
+    "description": "<div>Our Global Content Accounting Operations team makes sure the songwriters behind the music on Spotify are accurately accounted for and paid, everywhere in t…",
+    "id": "b24fe5e5-dcb2-4238-a883-5fdb6bd404db",
+    "lists": [
+      {
+        "text": "What You'll do",
+        "content": "<div>\n\n<li>Execute the monthly global content accounting close, delivering accurate results on time for reporting, including account reconciliations, roll-forwa…"
+      },
+      {
+        "text": "Who You Are",
+        "content": "<div>\n\n<li>You hold a Bachelor’s degree in Accounting, ideally with a CPA or CA, and have 3+ years of professional experience, with Big 4 or entertainment and m…"
+      },
+      {
+        "text": "Where You'll Be",
+        "content": "<div>This role is based in New York.</div>\n<div>&nbsp;</div>\n<div>We offer you the flexibility to work where you work best! There will be some in person meeting…"
+      }
+    ],
+    "salaryRange": {
+      "min": 75645,
+      "currency": "USD",
+      "interval": "per-year-salary",
+      "max": 94556
+    },
+    "text": "Accounting Analyst, Content Accounting",
+    "country": "US",
+    "workplaceType": "hybrid",
+    "opening": "",
+    "openingPlain": "",
+    "descriptionBody": "<div>Our Global Content Accounting Operations team makes sure the songwriters behind the music on Spotify are accurately accounted for and paid, everywhere in t…",
+    "descriptionBodyPlain": "",
+    "hostedUrl": "https://jobs.lever.co/spotify/b24fe5e5-dcb2-4238-a883-5fdb6bd404db",
+    "applyUrl": "https://jobs.lever.co/spotify/b24fe5e5-dcb2-4238-a883-5fdb6bd404db/apply"
+  }
+]

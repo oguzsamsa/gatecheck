@@ -111,7 +111,11 @@ export async function poll(deps: PollDeps, watchlist: WatchlistEntry[]): Promise
         touchBoard(db, c.id, sourceStart);
         report = { ...base, status: 'not_modified' };
       } else {
-        const fetched = outcome.postings.map((raw) => ({ raw, normalized: source.normalize(raw) }));
+        const fetched = outcome.postings.map((raw) => ({
+          raw,
+          normalized: source.normalize(raw),
+          fingerprint: source.fingerprint ? source.fingerprint(raw) : raw,
+        }));
         const result = ingestBoard(db, c.id, fetched, sourceStart);
         report = {
           ...base,

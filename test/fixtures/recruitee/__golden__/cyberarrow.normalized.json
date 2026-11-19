@@ -1,0 +1,45 @@
+[
+  {
+    "atsPostingId": "1971438",
+    "title": "Country Sales Head [TR & CIS]",
+    "url": "https://jobs.cyberarrow.io/o/country-sales-manager-turkey",
+    "department": "Sales",
+    "employmentType": "full_time",
+    "postedAt": "2025-01-07T06:54:21.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "TR",
+        "region": null,
+        "city": "Istanbul",
+        "raw": "Istanbul [Istanbul, İstanbul, TR]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "2154720",
+    "title": "Sales Development Manager [Remote]",
+    "url": "https://jobs.cyberarrow.io/o/sales-development-representative-remote-2",
+    "department": "Sales",
+    "employmentType": "full_time",
+    "postedAt": "2025-05-28T21:05:14.000Z",
+    "locations": [
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "PT",
+        "region": null,
+        "city": "Lisbon",
+        "raw": "Lisbon [Lisbon, Lisboa, PT]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "RO",
+        "region": null,
+        "city": "Bucharest",
+        "raw": "Bucharest [Bucharest, București, RO]"
+      }
+    ],
+    "compensation": []
+  }
+]

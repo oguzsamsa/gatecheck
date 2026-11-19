@@ -14,9 +14,12 @@
  *    with region "Georgia") are the address, not new places.
  * 3. A city belongs to the structured country when it is the structured locality, or to
  *    the country the gazetteer places it in.
- * 4. An entry that resolves to nothing still yields a claim with only `raw`, so it can
- *    push the posting to `unknown`. Weak entries (secondary hints such as Greenhouse office
- *    names, which are sometimes department names) contribute only what they resolve.
+ * 4. Text we could not read always yields a claim with only `raw`, so it pushes the
+ *    posting to `unknown` instead of vanishing.
+ * 5. Fallbacks only fill silence. Weak entries (secondary hints such as Greenhouse office
+ *    groups, which may be a whole region or even a department) count only when the strong
+ *    entries resolve no place; a label that names no place at all ("Remote", "N/A") counts
+ *    only when nothing else about the posting is known.
  */
 import type { LocationClaim, LocationKind } from '../domain/types.ts';
 import { COUNTRY_NAMES } from '../geo/countries.data.ts';
@@ -56,39 +59,61 @@ export function describeEntry(entry: LocationEntry): string {
 }
 
 export function claimsFromEntries(entries: readonly LocationEntry[]): LocationClaim[] {
-  const claims = new Map<string, LocationClaim>();
-  const add = (claim: LocationClaim) => {
+  const read = entries.map((entry) => ({ entry, ...readEntry(entry) }));
+  const strong = read.filter((r) => !r.entry.weak);
+
+  const claims = strong.flatMap((r) => r.places);
+  if (claims.length === 0)
+    claims.push(...read.filter((r) => r.entry.weak).flatMap((r) => r.places));
+  claims.push(...strong.filter((r) => r.unreadable).flatMap((r) => r.bare ?? []));
+  if (claims.length === 0) claims.push(...strong.flatMap((r) => r.bare ?? []));
+
+  const unique = new Map<string, LocationClaim>();
+  for (const claim of claims) {
     const key = [claim.kind, claim.countryCode, claim.region, claim.city].join('|');
-    if (!claims.has(key)) claims.set(key, claim);
+    if (!unique.has(key)) unique.set(key, claim);
+  }
+  return [...unique.values()];
+}
+
+/** The places one entry resolves to, or — if none — the bare claim that keeps its text. */
+function readEntry(entry: LocationEntry): {
+  places: LocationClaim[];
+  bare: LocationClaim | null;
+  unreadable: boolean;
+} {
+  const { kind } = entry;
+  const raw = describeEntry(entry);
+  const structured = resolveCountry(entry.country);
+  const fromLabel = resolvePlaces(entry.label, { skip: [entry.locality, entry.region] });
+
+  const structuredCountry =
+    structured.countries.length === 1 ? (structured.countries[0] ?? null) : null;
+  const locality = entry.locality?.trim() || null;
+  const cityFor = (code: CountryCode): string | null => {
+    if (code === structuredCountry && locality) return locality;
+    const cities = fromLabel.cities.filter((c) => c.country === code);
+    return cities.length === 1 ? (cities[0]?.name ?? null) : null;
   };
 
-  for (const entry of entries) {
-    const { kind } = entry;
-    const raw = describeEntry(entry);
-    const structured = resolveCountry(entry.country);
-    const fromLabel = resolvePlaces(entry.label, { skip: [entry.locality, entry.region] });
-
-    const structuredCountry =
-      structured.countries.length === 1 ? (structured.countries[0] ?? null) : null;
-    const locality = entry.locality?.trim() || null;
-    const cityFor = (code: CountryCode): string | null => {
-      if (code === structuredCountry && locality) return locality;
-      const cities = fromLabel.cities.filter((c) => c.country === code);
-      return cities.length === 1 ? (cities[0]?.name ?? null) : null;
-    };
-
-    const countries = new Set([...structured.countries, ...fromLabel.countries]);
-    const regions = new Set([...fromLabel.regions, ...structured.regions]);
-
-    for (const region of regions) add({ kind, countryCode: null, region, city: null, raw });
-    for (const code of countries) {
-      add({ kind, countryCode: code, region: null, city: cityFor(code), raw });
-    }
-    if (countries.size === 0 && regions.size === 0 && !entry.weak && raw !== '') {
-      add({ kind, countryCode: null, region: null, city: locality, raw });
-    }
-  }
-  return [...claims.values()];
+  const regions = new Set([...fromLabel.regions, ...structured.regions]);
+  const countries = new Set([...structured.countries, ...fromLabel.countries]);
+  const places: LocationClaim[] = [
+    ...[...regions].map((region) => ({ kind, countryCode: null, region, city: null, raw })),
+    ...[...countries].map((code) => ({
+      kind,
+      countryCode: code,
+      region: null,
+      city: cityFor(code),
+      raw,
+    })),
+  ];
+  if (places.length > 0 || raw === '') return { places, bare: null, unreadable: false };
+  return {
+    places,
+    bare: { kind, countryCode: null, region: null, city: locality, raw },
+    unreadable: fromLabel.unresolved.length + structured.unresolved.length > 0,
+  };
 }
 
 /**

@@ -1,18 +1,12 @@
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { LocationClaim, NormalizedPosting } from '../../src/domain/types.ts';
 import { ashby } from '../../src/sources/ashby/index.ts';
 import { AshbyBoard, type AshbyJob } from '../../src/sources/ashby/schema.ts';
 import { SourceError, type HttpClient, type JsonResponse } from '../../src/sources/http.ts';
 
-/**
- * Fixtures are real public Ashby responses (Nov 2026), trimmed to postings that each
- * exercise a normalization edge case, with descriptions shortened.
- */
+/** Targeted checks on the Ashby fixtures; the full output is covered by golden.test.ts. */
 const FIXTURES = new URL('../fixtures/ashby/', import.meta.url);
-const boards = readdirSync(FIXTURES)
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => f.replace(/\.json$/, ''));
 
 function board(name: string): unknown {
   return JSON.parse(readFileSync(new URL(`${name}.json`, FIXTURES), 'utf8'));
@@ -38,15 +32,6 @@ function claims(posting: NormalizedPosting): string[] {
     [c.kind, c.countryCode ?? c.region ?? '?', c.city].filter(Boolean).join(' ');
   return [...new Set(posting.locations.map(show))].sort();
 }
-
-describe('ashby.normalize — golden files', () => {
-  it.each(boards)('%s', async (name) => {
-    const output = jobs(name).map((job) => ashby.normalize(job));
-    await expect(JSON.stringify(output, null, 2) + '\n').toMatchFileSnapshot(
-      `../fixtures/ashby/__golden__/${name}.normalized.json`,
-    );
-  });
-});
 
 describe('ashby.normalize — location claims', () => {
   it('trusts workplaceType over isRemote (Ashby sets isRemote on Hybrid postings)', () => {

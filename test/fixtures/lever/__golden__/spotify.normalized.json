@@ -1,0 +1,53 @@
+[
+  {
+    "atsPostingId": "b459a23c-18bd-43f6-a8fa-2a3165c8dac7",
+    "title": "Machine Learning Engineering Manager II",
+    "url": "https://jobs.lever.co/spotify/b459a23c-18bd-43f6-a8fa-2a3165c8dac7",
+    "department": "Engineering",
+    "employmentType": "full_time",
+    "postedAt": "2026-11-09T16:41:13.651Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "SE",
+        "region": null,
+        "city": "Stockholm",
+        "raw": "Stockholm [SE]"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "GB",
+        "region": null,
+        "city": "London",
+        "raw": "London"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "b24fe5e5-dcb2-4238-a883-5fdb6bd404db",
+    "title": "Accounting Analyst, Content Accounting",
+    "url": "https://jobs.lever.co/spotify/b24fe5e5-dcb2-4238-a883-5fdb6bd404db",
+    "department": "Finance",
+    "employmentType": null,
+    "postedAt": "2026-11-13T10:27:28.197Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "New York",
+        "raw": "New York, NY [US]"
+      }
+    ],
+    "compensation": [
+      {
+        "min": 75645,
+        "max": 94556,
+        "currency": "USD",
+        "period": "year",
+        "source": "lever.salaryRange"
+      }
+    ]
+  }
+]

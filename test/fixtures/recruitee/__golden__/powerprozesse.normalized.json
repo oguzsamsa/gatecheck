@@ -1,0 +1,173 @@
+[
+  {
+    "atsPostingId": "2832742",
+    "title": "🇩🇪 IT-Consultant (m/w/d) – 100% Remote – Deutsch fließend",
+    "url": "https://powerprozesse.recruitee.com/o/it-consultant-mwd-100-remote-deutsch-flieend",
+    "department": "IT-Projektmanagement",
+    "employmentType": "full_time",
+    "postedAt": "2026-11-18T17:11:11.000Z",
+    "locations": [
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "RO",
+        "region": null,
+        "city": "Bukarest",
+        "raw": "Romania [Bukarest, Bukarest, RO]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "TN",
+        "region": null,
+        "city": "Tunis",
+        "raw": "Tunisia [Tunis, Tunis, TN]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "MA",
+        "region": null,
+        "city": "Rabat",
+        "raw": "Morocco [Rabat, Rabat-Salé-Kénitra, MA]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "EG",
+        "region": null,
+        "city": "Kairo",
+        "raw": "Kairo [Kairo, Al Qāhirah, EG]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "BG",
+        "region": null,
+        "city": "Sofia",
+        "raw": "Bulgaria [Sofia, Sofia, BG]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "HU",
+        "region": null,
+        "city": "Budapest",
+        "raw": "Hungary [Budapest, Budapest, HU]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "RS",
+        "region": null,
+        "city": "Belgrad",
+        "raw": "Serbia [Belgrad, Belgrad, RS]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "CZ",
+        "region": null,
+        "city": "Prague",
+        "raw": "Czech Republic [Prague, Praha, Hlavní město, CZ]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "EE",
+        "region": null,
+        "city": "Talinn",
+        "raw": "Estonia [Talinn, Tartu, EE]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "HR",
+        "region": null,
+        "city": "Zagreb",
+        "raw": "Kroatien [Zagreb, Gespanschaft Zagreb, HR]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "LV",
+        "region": null,
+        "city": "Riga",
+        "raw": "Latvia [Riga, Rīga, LV]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "LT",
+        "region": null,
+        "city": "Vilnius",
+        "raw": "Lithuania [Vilnius, Vilniaus apskritis, LT]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "SK",
+        "region": null,
+        "city": "Bratislava",
+        "raw": "Slovakia [Bratislava, Preßburger Bezirk, SK]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "SI",
+        "region": null,
+        "city": "Ljubljana",
+        "raw": "Slovenia [Ljubljana, Ajdovščina, SI]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "BA",
+        "region": null,
+        "city": "Sarajevo",
+        "raw": "Bosnia and Herzegovina [Sarajevo, Föderation Bosnien und Herzegowina, BA]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "AL",
+        "region": null,
+        "city": "Tirana",
+        "raw": "Albania [Tirana, Tirana, AL]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "TR",
+        "region": null,
+        "city": "Istanbul",
+        "raw": "Turkey [Istanbul, İstanbul, TR]"
+      },
+      {
+        "kind": "applicant_requirement",
+        "countryCode": "MK",
+        "region": null,
+        "city": "Skopje",
+        "raw": "North Macedonia [Skopje, Veles, MK]"
+      }
+    ],
+    "compensation": [
+      {
+        "min": 1500,
+        "max": 3000,
+        "currency": "USD",
+        "period": "month",
+        "source": "recruitee.salary"
+      }
+    ]
+  },
+  {
+    "atsPostingId": "2831370",
+    "title": "Büroaushilfe Worms 520€ Minijob",
+    "url": "https://powerprozesse.recruitee.com/o/buroaushilfe-worms-520-minijob-7",
+    "department": null,
+    "employmentType": "part_time",
+    "postedAt": "2026-11-18T06:30:46.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "DE",
+        "region": null,
+        "city": "Worms",
+        "raw": "Worms [Worms, Rheinland-Pfalz, DE]"
+      }
+    ],
+    "compensation": [
+      {
+        "min": null,
+        "max": 520,
+        "currency": "EUR",
+        "period": null,
+        "source": "recruitee.salary"
+      }
+    ]
+  }
+]

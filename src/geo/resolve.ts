@@ -45,14 +45,18 @@ const MODALITY_WORDS = new Set([
   'locations',
 ]);
 
+/** Labels that say nothing about place at all. */
+const NO_PLACE = new Set(['n a', 'na', 'tbd', 'tba', 'various', 'multiple', 'flexible']);
+
 /**
  * Turns a free-text location label into countries, regions and cities.
  *
  * The rule is deliberately strict: a segment counts only when, after dropping modality
- * words, the *whole* segment is a known country, region or city name — or, for "US or Canada",
- * when every part of it is. No substring matching: that is how "New Mexico" becomes Mexico
- * and "Türkiye" goes missing. Anything else is reported as unresolved so the caller can
- * keep it as an unknown claim rather than guess.
+ * words, the *whole* segment is a known country, region or city name — or when every
+ * alternative ("US or Canada") or every word ("US-NYC", "London UK") of it is. No
+ * substring matching: that is how "New Mexico" becomes Mexico and "Türkiye" goes missing.
+ * Anything else is reported as unresolved so the caller can keep it as an unknown claim
+ * rather than guess.
  */
 export function resolvePlaces(
   text: string,
@@ -67,9 +71,14 @@ export function resolvePlaces(
   const unresolved: string[] = [];
   const skip = new Set(options.skip?.filter((s) => s != null).map(foldPlaceText));
 
-  // The longest reading wins: the text as a whole first ("Europe, Middle East and Africa"
-  // is EMEA, not Europe plus leftovers), and only then its delimited segments.
-  const asWhole = readSegment(text, skip);
+  // A label that says nothing about place ("N/A") must not be split into fragments.
+  if (NO_PLACE.has(foldPlaceText(text))) {
+    return { countries: [], regions: [], cities: [], unresolved };
+  }
+
+  // The longest reading wins: the text as one exact name first ("Europe, Middle East and
+  // Africa" is EMEA, not Europe plus leftovers), and only then its delimited segments.
+  const asWhole = readSegment(text, skip, { exactOnly: true });
   const readings = asWhole?.places
     ? [asWhole]
     : text.split(SEGMENT_DELIMITERS).map((segment) => readSegment(segment, skip));
@@ -107,6 +116,7 @@ type Place =
 function readSegment(
   segment: string,
   skip: ReadonlySet<string>,
+  { exactOnly = false } = {},
 ): { text: string; places: Place[] | null } | null {
   const folded = foldPlaceText(segment);
   if (skip.has(folded)) return null;
@@ -114,11 +124,16 @@ function readSegment(
     .split(' ')
     .filter((w) => w !== '' && !MODALITY_WORDS.has(w))
     .join(' ');
-  if (stripped === '') return null;
+  if (stripped === '' || NO_PLACE.has(stripped)) return null;
 
   // The unstripped form first, so names that contain a modality word
   // ("Anywhere in the world") still match as a whole.
-  const places = matchOne(folded) ?? matchOne(stripped) ?? matchAll(stripped.split(/ (?:or|and) /));
+  // Then "US or Canada" (every alternative is a place), then "US-NYC" / "London UK"
+  // (every word is a place on its own) — never a partial match.
+  const exact = matchOne(folded) ?? matchOne(stripped);
+  const places = exactOnly
+    ? exact
+    : (exact ?? matchAll(stripped.split(/ (?:or|and) /)) ?? matchAll(stripped.split(' ')));
   return { text: stripped, places };
 }
 

@@ -1,0 +1,64 @@
+open    ashby/codeway · Marketing Artist
+        Türkiye listed (Istanbul) — office, from "Istanbul [Istanbul, Şişli, Turkey]"
+open    ashby/codeway · HR Operations Specialist
+        Türkiye listed (Istanbul) — office, from "Istanbul [Istanbul, Şişli, Turkey]"
+open    ashby/jobs.funnelfox.com · Fullstack Engineer
+        Türkiye listed — remote, from "Turkey"
+open    ashby/jobs.funnelfox.com · Payment Specialist
+        Türkiye listed — remote, from "Remote [Turkey]"
+unknown ashby/linear · Senior / Staff Fullstack Engineer
+        EUROPE may or may not include Türkiye
+closed  ashby/linear · Senior / Staff Product Engineer
+        limited to NORTH_AMERICA, US (remote)
+closed  ashby/notion · Enterprise Solutions Consultant (Atlanta, GA)
+        limited to US (remote)
+closed  ashby/posthog · Technical Support Engineer
+        limited to EU, US (remote)
+closed  ashby/posthog · AI Research Engineer
+        limited to GB (office)
+closed  ashby/ramp · Chief Compliance Officer, Ramp Advisory LLC
+        limited to US, CA (office, remote)
+open    ashby/supabase · AI Platform Engineer
+        WORLDWIDE covers Türkiye — remote, from "Remote, Global"
+open    ashby/supabase · Support Engineer (EMEA)
+        EMEA covers Türkiye — remote, from "Remote, EMEA"
+closed  ashby/supabase · Developer Relations Engineer
+        limited to US (remote)
+unknown greenhouse/automatticcareers · Business Development Representative, Pressable
+        "Remote" names no place we recognise
+closed  greenhouse/gitlab · Backend Engineer, GitLab Orbit
+        limited to CA, US (remote)
+closed  greenhouse/gitlab · Professional Services Engineer - KSA
+        limited to SA (remote)
+open    greenhouse/gitlab · Site Reliability Engineer, Infrastructure Platforms — UK (Intermediate to Senior Staff)
+        EMEA covers Türkiye — remote, from "EMEA"
+closed  greenhouse/stripe · Account Executive, Existing Business, French
+        limited to IE (office)
+closed  greenhouse/stripe · Data Scientist
+        limited to US (office)
+closed  greenhouse/stripe · Account Executive, Product Sales - Tax
+        limited to US (remote)
+unknown greenhouse/stripe · Partner Development Manager, Ecosystem Partnerships
+        "CA-Toronto" names no place we recognise; "CA-Remote" names no place we recognise
+closed  lever/binance · Business Compliance Manager - Payments
+        limited to SG, HK (office)
+closed  lever/binance · Law Enforcement Specialist – UAE
+        limited to AE (office)
+closed  lever/binance · MLRO - Pakistan
+        limited to PK (office)
+unknown lever/binance · Web/App Test Engineer
+        "Asia" names no place we recognise
+closed  lever/palantir · Backend Software Engineer - Defense
+        limited to US (office)
+closed  lever/spotify · Machine Learning Engineering Manager II
+        limited to SE, GB (remote)
+closed  lever/spotify · Accounting Analyst, Content Accounting
+        limited to US (office)
+open    recruitee/cyberarrow · Country Sales Head [TR & CIS]
+        Türkiye listed (Istanbul) — office, from "Istanbul [Istanbul, İstanbul, TR]"
+closed  recruitee/cyberarrow · Sales Development Manager [Remote]
+        limited to PT, RO (applicant requirement)
+open    recruitee/powerprozesse · 🇩🇪 IT-Consultant (m/w/d) – 100% Remote – Deutsch fließend
+        Türkiye listed (Istanbul) — applicant requirement, from "Turkey [Istanbul, İstanbul, TR]"
+closed  recruitee/powerprozesse · Büroaushilfe Worms 520€ Minijob
+        limited to DE (office)

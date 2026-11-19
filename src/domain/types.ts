@@ -7,7 +7,7 @@ import type { CountryCode } from '../geo/countries.ts';
 import type { Region } from '../geo/regions.ts';
 
 /** Grows one entry per adapter; the source registry is typed to require an adapter for each. */
-export const ATS_VALUES = ['ashby'] as const;
+export const ATS_VALUES = ['ashby', 'greenhouse', 'lever', 'recruitee'] as const;
 export type Ats = (typeof ATS_VALUES)[number];
 
 /**

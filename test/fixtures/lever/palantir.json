@@ -1,0 +1,49 @@
+[
+  {
+    "additionalPlain": "Salary\n \nThe estimated salary range for this position is estimated to be $135,000 - $200,000/year. Total compensation for this position may also include Restric…",
+    "additional": "<div><strong style=\"font-size: 18px;\">Salary</strong></div>\n<div>&nbsp;</div>\n<div><span style=\"font-size: 15px;\">The estimated salary range for this position i…",
+    "categories": {
+      "commitment": "Full-time",
+      "location": "Washington, D.C.",
+      "team": "Dev",
+      "allLocations": [
+        "Washington, D.C."
+      ]
+    },
+    "createdAt": 1740435531334,
+    "descriptionPlain": "A World-Changing Company\n \nPalantir builds the world’s leading software for data-driven decisions and operations. By bringing the right data to the people who n…",
+    "description": "<div><strong><span style=\"font-size: 18px;\">A World-Changing Company</span></strong></div>\n<div>&nbsp;</div>\n<div>Palantir builds the world’s leading software f…",
+    "id": "1345438c-ebfc-4fa5-b545-30c1414f317c",
+    "lists": [
+      {
+        "text": "Some examples of product work you could work on are:",
+        "content": "\n<li>Build for high-scale, collaborative, geospatial workflows (<a rel=\"noopener noreferrer\" href=\"https://palantir.highspot.com/items/646ccc59a8597170f9609759?…"
+      },
+      {
+        "text": "Core Responsibilities",
+        "content": "\n<li>Architecting, developing, and maintaining high-performance, scalable backend services that underpin our our operational data and AI systems</li>\n<li>Mainta…"
+      },
+      {
+        "text": "Technologies We Use",
+        "content": "\n<li>Different backend languages, including Java, Rust, Python and Go</li>\n<li>Distributed systems technologies such as Kafka, Cassandra, Elasticsearch and Spar…"
+      },
+      {
+        "text": "What We Value",
+        "content": "\n<li>A deep understanding of server-side logic, efficient data handling, and distributed systems</li>\n<li>Strong focus on creating user-oriented workflows and s…"
+      },
+      {
+        "text": "What We Require",
+        "content": "\n<li>Experience in designing and developing features and improvements, as well as supporting and maintaining, live backend systems</li>\n<li>In-depth understandi…"
+      }
+    ],
+    "text": "Backend Software Engineer - Defense",
+    "country": "US",
+    "workplaceType": "onsite",
+    "opening": "<div><strong><span style=\"font-size: 18px;\">A World-Changing Company</span></strong></div>\n<div>&nbsp;</div>\n<div>Palantir builds the world&rsquo;s leading soft…",
+    "openingPlain": "A World-Changing Company\n \nPalantir builds the world’s leading software for data-driven decisions and operations. By bringing the right data to the people who n…",
+    "descriptionBody": "<div><strong style=\"font-size: 18px;\">The Role</strong></div>\n<div>&nbsp;</div>\n<div>Palantir's defense product vertical builds mission-critical products for th…",
+    "descriptionBodyPlain": "The Role\n \nPalantir's defense product vertical builds mission-critical products for the modern warfighter. We provide a complete ecosystem where customers can s…",
+    "hostedUrl": "https://jobs.lever.co/palantir/1345438c-ebfc-4fa5-b545-30c1414f317c",
+    "applyUrl": "https://jobs.lever.co/palantir/1345438c-ebfc-4fa5-b545-30c1414f317c/apply"
+  }
+]

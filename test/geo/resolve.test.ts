@@ -79,12 +79,21 @@ describe('resolvePlaces', () => {
   });
 
   it('reports what it could not resolve instead of guessing', () => {
-    expect(resolvePlaces('Remote, London UK')).toEqual({
+    expect(resolvePlaces('Remote, Springfield')).toEqual({
       countries: [],
       regions: [],
       cities: [],
-      unresolved: ['london uk'],
+      unresolved: ['springfield'],
     });
+    expect(resolvePlaces('N/A').unresolved).toEqual([]);
+  });
+
+  it('reads a segment whose every word is a place on its own', () => {
+    expect(resolvePlaces('Remote, London UK').cities).toEqual([{ country: 'GB', name: 'London' }]);
+    expect(places('US-NYC').countries).toEqual(['US']);
+    expect(places('Remote, KSA').countries).toEqual(['SA']);
+    // …but never part of one: "Jersey" is a country, "City" is not a place.
+    expect(places('Jersey City')).toEqual({ countries: [], regions: [] });
   });
 
   it('skips segments the caller already knows the meaning of', () => {

@@ -24,4 +24,9 @@ export interface BoardSource<Raw = unknown> {
   readonly ats: Ats;
   fetch(org: string, ctx: FetchContext): Promise<FetchOutcome<Raw>>;
   normalize(raw: Raw): NormalizedPosting;
+  /**
+   * What the content hash covers, when not the whole payload — e.g. without an
+   * `updated_at` the ATS bumps on every save, so a version means a real change.
+   */
+  fingerprint?(raw: Raw): unknown;
 }

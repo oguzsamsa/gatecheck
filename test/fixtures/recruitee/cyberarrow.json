@@ -1,0 +1,217 @@
+{
+  "offers": [
+    {
+      "created_at": "2025-01-07 06:34:53 UTC",
+      "position": 12,
+      "options_salutation": "off",
+      "mailbox_email": "job.vttsw@cyberarrow.recruitee.com",
+      "translations": {
+        "en": {
+          "description": "<p class=\"MsoNormal\"><strong><u><span style=\"color:#000000\">Company Description</span></u></strong><span style=\"color:#000000\"><br><br>CyberArrow is your top so…",
+          "title": "Country Sales Head [TR & CIS]",
+          "highlight": null,
+          "requirements": null,
+          "sharing_image": null,
+          "sharing_title": "Country Sales Head [TR & CIS]",
+          "sharing_description": "Company DescriptionCyberArrow is your top solution for stress-free cybersecurity compliance and awareness. We are trusted by some of the world's largest brands,…",
+          "locations_question": "What is your preferred work location?"
+        }
+      },
+      "locations_question": "What is your preferred work location?",
+      "on_site": false,
+      "options_title": "off",
+      "min_hours_per_week": null,
+      "hybrid": true,
+      "cover_image": null,
+      "options_phone": "required",
+      "careers_apply_url": "https://jobs.cyberarrow.io/o/country-sales-manager-turkey/c/new",
+      "locations_question_required": true,
+      "locations": [
+        {
+          "id": 179909,
+          "name": "Istanbul",
+          "state": "İstanbul",
+          "country": "Türkiye",
+          "city": "Istanbul",
+          "translations": {
+            "en": {
+              "name": "Istanbul",
+              "city": "Istanbul",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "TR",
+          "state_code": "34",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        }
+      ],
+      "state_name": "İstanbul",
+      "updated_at": "2026-08-05 02:33:38 UTC",
+      "options_cover_letter": "optional",
+      "open_questions": [],
+      "salary": {
+        "max": null,
+        "min": null,
+        "period": null,
+        "currency": null
+      },
+      "min_hours": null,
+      "tags": [],
+      "title": "Country Sales Head [TR & CIS]",
+      "department": "Sales",
+      "highlight": null,
+      "requirements": null,
+      "location_question_visible": false,
+      "close_at": null,
+      "experience_code": "executive",
+      "country_code": "TR",
+      "country": "Türkiye",
+      "slug": "country-sales-manager-turkey",
+      "locations_question_type": "multiple_choice",
+      "guid": "vttsw",
+      "options_cv": "required",
+      "max_hours_per_week": null,
+      "description": "<p class=\"MsoNormal\"><strong><u><span style=\"color:#000000\">Company Description</span></u></strong><span style=\"color:#000000\"><br><br>CyberArrow is your top so…",
+      "sharing_description": "Company DescriptionCyberArrow is your top solution for stress-free cybersecurity compliance and awareness. We are trusted by some of the world's largest brands,…",
+      "employment_type_code": "fulltime_permanent",
+      "sharing_title": "Country Sales Head [TR & CIS]",
+      "remote": false,
+      "state_code": "34",
+      "careers_url": "https://jobs.cyberarrow.io/o/country-sales-manager-turkey",
+      "id": 1971438,
+      "max_hours": null,
+      "sharing_image": null,
+      "location": "Istanbul, İstanbul, Türkiye",
+      "category_code": "sales",
+      "city": "Istanbul",
+      "education_code": "master_degree",
+      "options_photo": "off",
+      "company_name": "CyberArrow",
+      "dynamic_fields": [],
+      "status": "published",
+      "published_at": "2025-01-07 06:54:21 UTC",
+      "postal_code": null
+    },
+    {
+      "created_at": "2025-05-28 21:02:44 UTC",
+      "position": 13,
+      "options_salutation": "off",
+      "mailbox_email": "job.cgg59@cyberarrow.recruitee.com",
+      "translations": {
+        "en": {
+          "description": "<p><strong>Company Description</strong><br /></p>\n<p>CyberArrow is your top solution to stress-free cyber security compliance and awareness. We are trusted by t…",
+          "title": "Sales Development Manager [Remote]",
+          "highlight": null,
+          "requirements": null,
+          "sharing_image": "https://recruitee-main.s3.eu-central-1.amazonaws.com/offers/2154720/normal_sharing_8kdlfk25o39d.png",
+          "sharing_title": "Sales Development Manager [Remote]",
+          "sharing_description": "Company Description\nCyberArrow is your top solution to stress-free cyber security compliance and awareness. We are trusted by the world's biggest brands includi…",
+          "locations_question": "What is your preferred work location?"
+        }
+      },
+      "locations_question": "What is your preferred work location?",
+      "on_site": false,
+      "options_title": "off",
+      "min_hours_per_week": "30",
+      "hybrid": false,
+      "cover_image": null,
+      "options_phone": "required",
+      "careers_apply_url": "https://jobs.cyberarrow.io/o/sales-development-representative-remote-2/c/new",
+      "locations_question_required": true,
+      "locations": [
+        {
+          "id": 179914,
+          "name": "Lisbon",
+          "state": "Lisboa",
+          "country": "Portugal",
+          "city": "Lisbon",
+          "translations": {
+            "en": {
+              "name": "Lisbon",
+              "city": "Lisbon",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "PT",
+          "state_code": "11",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        },
+        {
+          "id": 179915,
+          "name": "Bucharest",
+          "state": "București",
+          "country": "Romania",
+          "city": "Bucharest",
+          "translations": {
+            "en": {
+              "name": "Bucharest",
+              "city": "Bucharest",
+              "postal_code": null,
+              "street": null,
+              "note": null
+            }
+          },
+          "country_code": "RO",
+          "state_code": "B",
+          "postal_code": null,
+          "street": null,
+          "note": null
+        }
+      ],
+      "state_name": "Lisboa",
+      "updated_at": "2026-08-04 09:22:12 UTC",
+      "options_cover_letter": "optional",
+      "open_questions": [],
+      "salary": {
+        "max": null,
+        "min": null,
+        "period": null,
+        "currency": null
+      },
+      "min_hours": 30,
+      "tags": [],
+      "title": "Sales Development Manager [Remote]",
+      "department": "Sales",
+      "highlight": null,
+      "requirements": null,
+      "location_question_visible": true,
+      "close_at": null,
+      "experience_code": "mid_level",
+      "country_code": "PT",
+      "country": "Portugal",
+      "slug": "sales-development-representative-remote-2",
+      "locations_question_type": "multiple_choice",
+      "guid": "cgg59",
+      "options_cv": "required",
+      "max_hours_per_week": "40",
+      "description": "<p><strong>Company Description</strong><br /></p>\n<p>CyberArrow is your top solution to stress-free cyber security compliance and awareness. We are trusted by t…",
+      "sharing_description": "Company Description\nCyberArrow is your top solution to stress-free cyber security compliance and awareness. We are trusted by the world's biggest brands includi…",
+      "employment_type_code": "fulltime_permanent",
+      "sharing_title": "Sales Development Manager [Remote]",
+      "remote": true,
+      "state_code": "11",
+      "careers_url": "https://jobs.cyberarrow.io/o/sales-development-representative-remote-2",
+      "id": 2154720,
+      "max_hours": 40,
+      "sharing_image": "https://recruitee-main.s3.eu-central-1.amazonaws.com/offers/2154720/normal_sharing_8kdlfk25o39d.png",
+      "location": "Remote job",
+      "category_code": "sales",
+      "city": "Lisbon",
+      "education_code": "bachelor_degree",
+      "options_photo": "optional",
+      "company_name": "CyberArrow",
+      "dynamic_fields": [],
+      "status": "published",
+      "published_at": "2025-05-28 21:05:14 UTC",
+      "postal_code": null
+    }
+  ]
+}

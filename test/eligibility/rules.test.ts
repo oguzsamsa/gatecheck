@@ -1,12 +1,9 @@
-import { readFileSync, readdirSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { LocationClaim } from '../../src/domain/types.ts';
 import { regionCovers } from '../../src/eligibility/regions.ts';
 import { decide } from '../../src/eligibility/rules.ts';
 import type { CountryCode } from '../../src/geo/countries.ts';
 import type { Region } from '../../src/geo/regions.ts';
-import { ashby } from '../../src/sources/ashby/index.ts';
-import { AshbyBoard } from '../../src/sources/ashby/schema.ts';
 
 const claim = (over: Partial<LocationClaim>): LocationClaim => ({
   kind: 'remote_region',
@@ -93,25 +90,5 @@ describe('regionCovers', () => {
     ['WORLDWIDE', 'XK', 'yes'],
   ])('%s covers %s: %s', (r, c, expected) => {
     expect(regionCovers(r, c)).toBe(expected);
-  });
-});
-
-describe('golden verdicts for the Ashby fixtures (applicant: TR)', () => {
-  const dir = new URL('../fixtures/ashby/', import.meta.url);
-  const rows = readdirSync(dir)
-    .filter((f) => f.endsWith('.json'))
-    .flatMap((f) => {
-      const board: unknown = JSON.parse(readFileSync(new URL(f, dir), 'utf8'));
-      return AshbyBoard.parse(board).jobs.map((job) => {
-        const posting = ashby.normalize(job);
-        const { verdict, reason } = decide(posting.locations, 'TR');
-        return `${verdict.padEnd(7)} ${f.replace('.json', '')} · ${posting.title}\n        ${reason}`;
-      });
-    });
-
-  it('matches', async () => {
-    await expect(rows.join('\n') + '\n').toMatchFileSnapshot(
-      '../fixtures/ashby/__golden__/verdicts-TR.txt',
-    );
   });
 });

@@ -1,0 +1,63 @@
+[
+  {
+    "atsPostingId": "8771512002",
+    "title": "Backend Engineer, GitLab Orbit",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8771512002",
+    "department": "Data Engineering",
+    "employmentType": null,
+    "postedAt": "2026-10-23T22:47:07.000Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "CA",
+        "region": null,
+        "city": null,
+        "raw": "Remote, Canada"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "US",
+        "region": null,
+        "city": null,
+        "raw": "Remote, United States"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "8928253002",
+    "title": "Professional Services Engineer - KSA",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8928253002",
+    "department": "Consulting Delivery",
+    "employmentType": null,
+    "postedAt": "2026-11-09T18:21:28.000Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "SA",
+        "region": null,
+        "city": null,
+        "raw": "Remote, KSA"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "8773546002",
+    "title": "Site Reliability Engineer, Infrastructure Platforms — UK (Intermediate to Senior Staff)",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8773546002",
+    "department": "Platforms Engineering",
+    "employmentType": null,
+    "postedAt": "2026-09-08T17:52:41.000Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": null,
+        "region": "EMEA",
+        "city": null,
+        "raw": "EMEA"
+      }
+    ],
+    "compensation": []
+  }
+]

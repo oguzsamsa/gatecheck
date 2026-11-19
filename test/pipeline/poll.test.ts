@@ -15,6 +15,7 @@ import type { NormalizedPosting } from '../../src/domain/types.ts';
 import { canonicalJson } from '../../src/pipeline/hash.ts';
 import { poll } from '../../src/pipeline/poll.ts';
 import { SourceError, type HttpClient, type Validators } from '../../src/sources/http.ts';
+import { SOURCES } from '../../src/sources/index.ts';
 import type { BoardSource, FetchOutcome } from '../../src/sources/types.ts';
 
 interface FakeJob {
@@ -79,7 +80,7 @@ const http: HttpClient = { getJson: () => Promise.reject(new Error('unused')) };
 
 function runPoll(source: BoardSource<FakeJob>, watchlist = WATCHLIST) {
   clock += 86_400_000;
-  return poll({ db, http, sources: { ashby: source }, now }, watchlist);
+  return poll({ db, http, sources: { ...SOURCES, ashby: source }, now }, watchlist);
 }
 
 function postingsOf(org: string) {
