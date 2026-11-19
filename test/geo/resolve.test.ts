@@ -42,6 +42,11 @@ describe('resolvePlaces', () => {
     expect(places('Remote, Global').regions).toEqual(['WORLDWIDE']);
     expect(places('Work from anywhere').regions).toEqual(['WORLDWIDE']);
     expect(places('Anywhere in the world').regions).toEqual(['WORLDWIDE']);
+    // Alan's Ashby label: "anywhere" here narrows to the countries, it does not widen.
+    const alan = places('Anywhere in France, Belgium, Spain [Europe, Europe, European Union]');
+    expect(alan.regions).not.toContain('WORLDWIDE');
+    expect(alan.countries).toEqual(['FR', 'BE', 'ES']);
+    expect(places('Anywhere in Europe').regions).toEqual(['EUROPE']);
     expect(places('Europe, Middle East and Africa').regions).toEqual(['EMEA']);
   });
 

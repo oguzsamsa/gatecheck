@@ -13,6 +13,7 @@
   "scripts": {
     "poll": "node src/cli/poll.ts",
     "inspect": "node src/cli/inspect.ts",
+    "reprocess": "node src/cli/reprocess.ts",
     "launchd": "node src/cli/launchd.ts",
     "discover": "node src/cli/discover.ts",
     "analyze": "node src/cli/analyze.ts",

@@ -121,7 +121,8 @@ function readEntry(entry: LocationEntry): {
  * marked Hybrid), if any. Adapters fall back to posting-level fields when this is null.
  */
 export function kindFromLabel(label: string): LocationKind | null {
-  if (/\bremote\b/i.test(label)) return 'remote_region';
+  if (/\b(remote|home[- ]?based|work from (home|anywhere)|wfh)\b/i.test(label))
+    return 'remote_region';
   if (/\b(hybrid|on-?site|office)\b/i.test(label)) return 'office';
   return null;
 }

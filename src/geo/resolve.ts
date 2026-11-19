@@ -131,6 +131,10 @@ function readSegment(
   // Then "US or Canada" (every alternative is a place), then "US-NYC" / "London UK"
   // (every word is a place on its own) — never a partial match.
   const exact = matchOne(folded) ?? matchOne(stripped);
+  // "Anywhere in France" narrows to France; only "anywhere" on its own means worldwide.
+  if (!exact && stripped.startsWith('anywhere ')) {
+    return readSegment(stripped.slice('anywhere '.length), skip, { exactOnly });
+  }
   const places = exactOnly
     ? exact
     : (exact ?? matchAll(stripped.split(/ (?:or|and) /)) ?? matchAll(stripped.split(' ')));
