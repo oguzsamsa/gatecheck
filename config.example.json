@@ -8,7 +8,10 @@
       "ats": "ashby",
       "org": "jobs.funnelfox.com",
       "careersUrl": "https://jobs.funnelfox.com"
-    }
+    },
+    { "name": "GitLab", "ats": "greenhouse", "org": "gitlab" },
+    { "name": "Spotify", "ats": "lever", "org": "spotify" },
+    { "name": "CyberArrow", "ats": "recruitee", "org": "cyberarrow" }
   ],
   "profile": {
     "titleKeywords": ["engineer", "developer"],
