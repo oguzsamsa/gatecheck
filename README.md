@@ -87,6 +87,15 @@ so guessing is safe. From then on the company is polled directly: the aggregator
 paywall are paid once, and skipped forever after. `pnpm discover url <careers-page>` adds a
 company from its careers page, including boards embedded under a custom domain.
 
+`pnpm discover list` does the same for a whole list: a text file of careers URLs (one per
+line, optionally `Name | URL`), or a directory of company profiles in the format of the
+community [remote-company directory](https://github.com/remoteintech/remote-jobs)
+(`src/companies/*.md`, ~880 companies). For each company it reads the careers page, or the
+home page and then one careers link from it, and takes the board linked or embedded there.
+The board comes from the company's own site, so no title check is needed; it is still
+fetched once before it is added. Pages that point at an ATS without an adapter (Workday,
+Personio, SmartRecruiters…) are tallied per system, which is how the next adapter is chosen.
+
 LinkedIn (its terms forbid automated collection) and Jobgether (paywalled) are deliberately
 not used, and pages behind bot protection are not worked around.
 
@@ -148,6 +157,8 @@ pnpm poll --dry-run                  # poll, evaluate, print the digest instead 
 pnpm poll                            # the real thing
 pnpm launchd install --hour 9        # macOS: run it every morning
 pnpm discover weworkremotely --keyword engineer --dry-run   # find more companies to watch
+pnpm discover list companies.txt --dry-run                  # or from a list of careers pages
+pnpm reprocess                       # after an adapter/resolver fix: re-read stored postings
 pnpm analyze --limit 3               # optional: read top postings with Claude, write drafts
 pnpm dashboard                       # browse everything at http://localhost:3000
 ```
