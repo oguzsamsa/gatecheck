@@ -1,0 +1,92 @@
+[
+  {
+    "atsPostingId": "6C6B4B42F5",
+    "title": "Maintenance Technician",
+    "url": "https://apply.workable.com/j/6C6B4B42F5",
+    "department": "City Core",
+    "employmentType": "full_time",
+    "postedAt": "2026-08-04T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "AT",
+        "region": null,
+        "city": "Vienna",
+        "raw": "Vienna, Vienna, AT"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "DF694D45CA",
+    "title": "Operations Lead - New York City",
+    "url": "https://apply.workable.com/j/DF694D45CA",
+    "department": "City Core",
+    "employmentType": "full_time",
+    "postedAt": "2026-09-23T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "New York",
+        "raw": "New York, New York, US"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "F31313C213",
+    "title": "PitStop Leader (Maintenance Technician)",
+    "url": "https://apply.workable.com/j/F31313C213",
+    "department": "City Core",
+    "employmentType": "full_time",
+    "postedAt": "2025-04-23T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "GR",
+        "region": null,
+        "city": "Athens",
+        "raw": "Athens, Attica, GR"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "BA193E747D",
+    "title": "Sales Admin, Extensions - On Demand",
+    "url": "https://apply.workable.com/j/BA193E747D",
+    "department": "Shared Services",
+    "employmentType": "full_time",
+    "postedAt": "2026-10-30T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "BR",
+        "region": null,
+        "city": null,
+        "raw": "BR"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "C32BE65B0A",
+    "title": "Warehouse Associate",
+    "url": "https://apply.workable.com/j/C32BE65B0A",
+    "department": "City Core",
+    "employmentType": "full_time",
+    "postedAt": "2025-10-21T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "Visalia",
+        "raw": "Visalia, California, US"
+      }
+    ],
+    "compensation": []
+  }
+]

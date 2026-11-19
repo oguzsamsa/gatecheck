@@ -1,0 +1,56 @@
+[
+  {
+    "atsPostingId": "00C85BAC46",
+    "title": "Business Intelligence Engineer - Skroutz Last Mile (BIE1026)",
+    "url": "https://apply.workable.com/j/00C85BAC46",
+    "department": "Last Mile",
+    "employmentType": "full_time",
+    "postedAt": "2026-10-21T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "GR",
+        "region": null,
+        "city": "Athens",
+        "raw": "Athens, Attica, GR"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "4FFDCB70B4",
+    "title": "Join Skroutz",
+    "url": "https://apply.workable.com/j/4FFDCB70B4",
+    "department": null,
+    "employmentType": null,
+    "postedAt": "2026-07-27T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "GR",
+        "region": null,
+        "city": "Athens",
+        "raw": "Athens, Attica, GR"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "8426872CFF",
+    "title": "Operations Coordinator - Skroutz Last Mile (OC1126)",
+    "url": "https://apply.workable.com/j/8426872CFF",
+    "department": "Last Mile",
+    "employmentType": "full_time",
+    "postedAt": "2026-11-09T00:00:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "CY",
+        "region": null,
+        "city": "Larnaca",
+        "raw": "Larnaca, Larnaca, CY"
+      }
+    ],
+    "compensation": []
+  }
+]

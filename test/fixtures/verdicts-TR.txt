@@ -70,3 +70,19 @@ closed  teamtailor/career.teamtailor.com · Account Executive - Bogota
         limited to CO (office)
 closed  teamtailor/career.teamtailor.com · Solution Architect
         limited to GB (office)
+closed  workable/blueground · Maintenance Technician
+        limited to AT (office)
+closed  workable/blueground · Operations Lead - New York City
+        limited to US (office)
+closed  workable/blueground · PitStop Leader (Maintenance Technician)
+        limited to GR (office)
+closed  workable/blueground · Sales Admin, Extensions - On Demand
+        limited to BR (remote)
+closed  workable/blueground · Warehouse Associate
+        limited to US (office)
+closed  workable/skroutz · Business Intelligence Engineer - Skroutz Last Mile (BIE1026)
+        limited to GR (office)
+closed  workable/skroutz · Join Skroutz
+        limited to GR (office)
+closed  workable/skroutz · Operations Coordinator - Skroutz Last Mile (OC1126)
+        limited to CY (office)
