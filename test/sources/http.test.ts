@@ -18,11 +18,13 @@ const json = (body: unknown, init: { headers?: Record<string, string> } = {}) =>
   });
 
 const noSleep = vi.fn(() => Promise.resolve());
+/** These tests script every response, so robots.txt and pacing are switched off. */
+const offline = { ignoreRobots: true, minIntervalMs: 0 };
 
 describe('createHttpClient', () => {
   it('identifies itself and returns the body with cache validators', async () => {
     const fetch = fakeFetch(json({ jobs: [] }, { headers: { etag: 'W/"abc"' } }));
-    const http = createHttpClient({ fetch, sleep: noSleep });
+    const http = createHttpClient({ fetch, sleep: noSleep, ...offline });
 
     const result = await http.getJson(URL_);
 
@@ -39,7 +41,7 @@ describe('createHttpClient', () => {
 
   it('sends a conditional request and reports not_modified on 304', async () => {
     const fetch = fakeFetch(new Response(null, { status: 304 }));
-    const http = createHttpClient({ fetch, sleep: noSleep });
+    const http = createHttpClient({ fetch, sleep: noSleep, ...offline });
     const previous = { etag: 'W/"abc"', lastModified: 'Wed, 18 Nov 2026 10:00:00 GMT' };
 
     const result = await http.getJson(URL_, previous);
@@ -57,7 +59,7 @@ describe('createHttpClient', () => {
       new Response(null, { status: 503 }),
       json({ ok: true }),
     );
-    const http = createHttpClient({ fetch, sleep, baseDelayMs: 100 });
+    const http = createHttpClient({ fetch, sleep, baseDelayMs: 100, ...offline });
 
     await expect(http.getJson(URL_)).resolves.toMatchObject({ status: 'ok' });
     expect(fetch).toHaveBeenCalledTimes(3);
@@ -73,7 +75,7 @@ describe('createHttpClient', () => {
       new Response(null, { status: 429, headers: { 'retry-after': '7' } }),
       json({}),
     );
-    await createHttpClient({ fetch, sleep }).getJson(URL_);
+    await createHttpClient({ fetch, sleep, ...offline }).getJson(URL_);
     expect(sleep).toHaveBeenCalledWith(7000);
   });
 
@@ -81,14 +83,16 @@ describe('createHttpClient', () => {
     const fetch = fakeFetch(
       new Response(null, { status: 429, headers: { 'retry-after': '3600' } }),
     );
-    await expect(createHttpClient({ fetch, sleep: noSleep }).getJson(URL_)).rejects.toMatchObject({
+    await expect(
+      createHttpClient({ fetch, sleep: noSleep, ...offline }).getJson(URL_),
+    ).rejects.toMatchObject({
       httpStatus: 429,
     });
   });
 
   it('does not retry client errors', async () => {
     const fetch = fakeFetch(new Response('not found', { status: 404 }));
-    const error = await createHttpClient({ fetch, sleep: noSleep })
+    const error = await createHttpClient({ fetch, sleep: noSleep, ...offline })
       .getJson(URL_)
       .catch((e: unknown) => e);
 
@@ -99,7 +103,7 @@ describe('createHttpClient', () => {
 
   it('fails with the cause after the last attempt', async () => {
     const fetch = fakeFetch(...Array.from({ length: 3 }, () => new TypeError('fetch failed')));
-    const error = await createHttpClient({ fetch, sleep: noSleep })
+    const error = await createHttpClient({ fetch, sleep: noSleep, ...offline })
       .getJson(URL_)
       .catch((e: unknown) => e);
 

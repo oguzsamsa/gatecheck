@@ -76,7 +76,10 @@ const WATCHLIST: WatchlistEntry[] = [
 let db: Db;
 let clock: number;
 const now = () => new Date(clock);
-const http: HttpClient = { getJson: () => Promise.reject(new Error('unused')) };
+const http: HttpClient = {
+  getJson: () => Promise.reject(new Error('unused')),
+  getText: () => Promise.reject(new Error('unused')),
+};
 
 function runPoll(source: BoardSource<FakeJob>, watchlist = WATCHLIST) {
   clock += 86_400_000;

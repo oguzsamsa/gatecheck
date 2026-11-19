@@ -130,6 +130,7 @@ describe('ashby.normalize — posting fields', () => {
 describe('ashby.fetch', () => {
   const httpReturning = (response: JsonResponse): HttpClient => ({
     getJson: () => Promise.resolve(response),
+    getText: () => Promise.reject(new Error('unused')),
   });
   const validators = { etag: 'W/"x"', lastModified: null };
 

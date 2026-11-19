@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:tt="https://teamtailor.com/locations">
+  <channel>
+    <title>Teamtailor</title>
+    <description>Current job openings</description>
+    <link>https://career.teamtailor.com/jobs</link>
+    <item>
+      <title>Enterprise Account Executive - Chicago</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid="sc-TJB8qo00" title="Play: Video" posterquality="sddefault"&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h4&gt;&lt;strong…</description>
+      <pubDate>Wed, 11 Nov 2026 17:34:36 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8706432-enterprise-account-executive-chicago</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>b5508148-ada5-4a7e-b2cb-55a3fd123a6f</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Chicago</tt:name>
+          <tt:address>125 S Clark St</tt:address>
+          <tt:zip>60603</tt:zip>
+          <tt:city>Chicago</tt:city>
+          <tt:country>United States</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Sales</tt:department>
+      <tt:role>Account Executive</tt:role>
+      <tt:division/>
+    </item>
+    <item>
+      <title>Customer Success Manager - Finnish speaking</title>
+      <description>&lt;h3&gt;Let's build the future together!&lt;/h3&gt;&lt;p&gt;&lt;a target="_blank" href="https://career.teamtailor.com/"&gt;Teamtailor&lt;/a&gt; is an Employer…</description>
+      <pubDate>Tue, 03 Nov 2026 19:37:57 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8660969-customer-success-manager-finnish-speaking</link>
+      <remoteStatus>none</remoteStatus>
+      <guid>7b9dec76-cac2-489b-bc00-aab47097947f</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Stockholm</tt:name>
+          <tt:address>Östgötagatan 16</tt:address>
+          <tt:zip>116 21</tt:zip>
+          <tt:city>Stockholm</tt:city>
+          <tt:country>Sweden</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Customer Success</tt:department>
+      <tt:role>Customer Success Manager</tt:role>
+      <tt:division/>
+    </item>
+    <item>
+      <title>Account Executive - Bogota</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid="sc-TJB8qo00" title="Play: Video" posterquality="sddefault"&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h4&gt;&lt;strong…</description>
+      <pubDate>Tue, 27 Oct 2026 19:09:21 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8626868-account-executive-bogota</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>10331f7b-0619-462d-a571-d84b19e6da45</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name></tt:name>
+          <tt:address>WeWork Espacio de Oficinas &amp; Coworking</tt:address>
+          <tt:zip>110221</tt:zip>
+          <tt:city>Bogotá</tt:city>
+          <tt:country>Colombia</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Sales</tt:department>
+      <tt:role>Account Executive</tt:role>
+      <tt:division/>
+    </item>
+    <item>
+      <title>Solution Architect</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid="sc-TJB8qo00" title="Play: Video" posterquality="sddefault"&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h4&gt;&lt;strong…</description>
+      <pubDate>Thu, 22 Oct 2026 14:58:00 +0200</pubDate>
+      <link>https://career.teamtailor.com/jobs/8591348-solution-architect</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>d9d55635-fa05-473c-9f02-b1c71f08e01b</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>London</tt:name>
+          <tt:address>16 Laystall Court</tt:address>
+          <tt:zip>EC1R 4</tt:zip>
+          <tt:city>London</tt:city>
+          <tt:country>United Kingdom</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Product Specialists</tt:department>
+      <tt:role/>
+      <tt:division/>
+    </item>
+  </channel>
+</rss>

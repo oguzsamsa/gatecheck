@@ -1,0 +1,74 @@
+[
+  {
+    "atsPostingId": "b5508148-ada5-4a7e-b2cb-55a3fd123a6f",
+    "title": "Enterprise Account Executive - Chicago",
+    "url": "https://career.teamtailor.com/jobs/8706432-enterprise-account-executive-chicago",
+    "department": "Sales",
+    "employmentType": null,
+    "postedAt": "2026-11-11T16:34:36.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "Chicago",
+        "raw": "Chicago [Chicago, United States]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "7b9dec76-cac2-489b-bc00-aab47097947f",
+    "title": "Customer Success Manager - Finnish speaking",
+    "url": "https://career.teamtailor.com/jobs/8660969-customer-success-manager-finnish-speaking",
+    "department": "Customer Success",
+    "employmentType": null,
+    "postedAt": "2026-11-03T18:37:57.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "SE",
+        "region": null,
+        "city": "Stockholm",
+        "raw": "Stockholm [Stockholm, Sweden]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "10331f7b-0619-462d-a571-d84b19e6da45",
+    "title": "Account Executive - Bogota",
+    "url": "https://career.teamtailor.com/jobs/8626868-account-executive-bogota",
+    "department": "Sales",
+    "employmentType": null,
+    "postedAt": "2026-10-27T18:09:21.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "CO",
+        "region": null,
+        "city": "Bogotá",
+        "raw": "Bogotá, Colombia"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "d9d55635-fa05-473c-9f02-b1c71f08e01b",
+    "title": "Solution Architect",
+    "url": "https://career.teamtailor.com/jobs/8591348-solution-architect",
+    "department": "Product Specialists",
+    "employmentType": null,
+    "postedAt": "2026-10-22T12:58:00.000Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "GB",
+        "region": null,
+        "city": "London",
+        "raw": "London [London, United Kingdom]"
+      }
+    ],
+    "compensation": []
+  }
+]
