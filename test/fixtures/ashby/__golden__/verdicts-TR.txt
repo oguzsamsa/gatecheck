@@ -1,0 +1,26 @@
+open    codeway · Marketing Artist
+        Türkiye listed (Istanbul) — office, from "Istanbul [Istanbul, Şişli, Turkey]"
+open    codeway · HR Operations Specialist
+        Türkiye listed (Istanbul) — office, from "Istanbul [Istanbul, Şişli, Turkey]"
+open    jobs.funnelfox.com · Fullstack Engineer
+        Türkiye listed — remote, from "Turkey"
+open    jobs.funnelfox.com · Payment Specialist
+        Türkiye listed — remote, from "Remote [Turkey]"
+unknown linear · Senior / Staff Fullstack Engineer
+        EUROPE may or may not include Türkiye
+closed  linear · Senior / Staff Product Engineer
+        limited to NORTH_AMERICA, US (remote)
+closed  notion · Enterprise Solutions Consultant (Atlanta, GA)
+        limited to US (remote)
+closed  posthog · Technical Support Engineer
+        limited to EU, US (remote)
+closed  posthog · AI Research Engineer
+        limited to GB (office)
+closed  ramp · Chief Compliance Officer, Ramp Advisory LLC
+        limited to US, CA (office, remote)
+open    supabase · AI Platform Engineer
+        WORLDWIDE covers Türkiye — remote, from "Remote, Global"
+open    supabase · Support Engineer (EMEA)
+        EMEA covers Türkiye — remote, from "Remote, EMEA"
+closed  supabase · Developer Relations Engineer
+        limited to US (remote)

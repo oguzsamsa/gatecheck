@@ -6,6 +6,7 @@ import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { ConfigError, loadConfig } from '../config.ts';
 import { openDb } from '../db/client.ts';
+import { evaluateOpenPostings } from '../eligibility/evaluate.ts';
 import { poll, type SourceReport } from '../pipeline/poll.ts';
 import { createHttpClient } from '../sources/http.ts';
 import { SOURCES } from '../sources/index.ts';
@@ -19,6 +20,12 @@ try {
   const report = await poll({ db, http, sources: SOURCES }, config.watchlist);
   console.log(`run #${report.runId}: ${report.status}`);
   for (const s of report.sources) console.log(`  ${describe(s)}`);
+
+  const changes = evaluateOpenPostings(db, config.applicant.country, new Date());
+  const count = (v: string) => changes.filter((c) => c.to === v).length;
+  console.log(
+    `eligibility: ${changes.length} changed (${count('open')} open, ${count('unknown')} unknown, ${count('closed')} closed)`,
+  );
   if (report.status === 'failed') process.exitCode = 1;
 } catch (error) {
   if (!(error instanceof ConfigError)) throw error;
