@@ -1,10 +1,13 @@
+import { cityByFoldedName, type City } from './cities.ts';
 import { countryByFoldedName, type CountryCode } from './countries.ts';
 import { regionByFoldedName, type Region } from './regions.ts';
 import { foldPlaceText } from './text.ts';
 
 export interface ResolvedPlaces {
+  /** Includes the country of every recognised city. */
   countries: CountryCode[];
   regions: Region[];
+  cities: City[];
   /** Folded segments that carried meaning but matched nothing (kept for diagnostics). */
   unresolved: string[];
 }
@@ -36,13 +39,17 @@ const MODALITY_WORDS = new Set([
   'the',
   'work',
   'home',
+  'homeoffice',
+  'job',
+  'location',
+  'locations',
 ]);
 
 /**
- * Turns a free-text location label into countries and regions.
+ * Turns a free-text location label into countries, regions and cities.
  *
  * The rule is deliberately strict: a segment counts only when, after dropping modality
- * words, the *whole* segment is a known country or region name — or, for "US or Canada",
+ * words, the *whole* segment is a known country, region or city name — or, for "US or Canada",
  * when every part of it is. No substring matching: that is how "New Mexico" becomes Mexico
  * and "Türkiye" goes missing. Anything else is reported as unresolved so the caller can
  * keep it as an unknown claim rather than guess.
@@ -56,6 +63,7 @@ export function resolvePlaces(
 ): ResolvedPlaces {
   const countries = new Set<CountryCode>();
   const regions = new Set<Region>();
+  const cities = new Map<string, City>();
   const unresolved: string[] = [];
   const skip = new Set(options.skip?.filter((s) => s != null).map(foldPlaceText));
 
@@ -74,14 +82,26 @@ export function resolvePlaces(
     }
     for (const place of reading.places) {
       if (place.type === 'country') countries.add(place.code);
-      else regions.add(place.region);
+      else if (place.type === 'region') regions.add(place.region);
+      else {
+        countries.add(place.city.country);
+        cities.set(`${place.city.country}|${place.city.name}`, place.city);
+      }
     }
   }
 
-  return { countries: [...countries], regions: [...regions], unresolved };
+  return {
+    countries: [...countries],
+    regions: [...regions],
+    cities: [...cities.values()],
+    unresolved,
+  };
 }
 
-type Place = { type: 'country'; code: CountryCode } | { type: 'region'; region: Region };
+type Place =
+  | { type: 'country'; code: CountryCode }
+  | { type: 'region'; region: Region }
+  | { type: 'city'; city: City };
 
 /** Null when the segment is skipped or carries no place words at all. */
 function readSegment(
@@ -107,6 +127,8 @@ function matchOne(folded: string): Place[] | null {
   if (code) return [{ type: 'country', code }];
   const region = regionByFoldedName(folded);
   if (region) return [{ type: 'region', region }];
+  const city = cityByFoldedName(folded);
+  if (city) return [{ type: 'city', city }];
   return null;
 }
 

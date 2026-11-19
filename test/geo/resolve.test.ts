@@ -52,9 +52,25 @@ describe('resolvePlaces', () => {
 
   it('does not read US state abbreviations as country codes', () => {
     for (const text of ['Boston, MA', 'Denver, CO', 'Chicago, IL', 'San Francisco, CA']) {
+      expect(places(text), text).toEqual({ countries: ['US'], regions: [] });
+    }
+    expect(places('Springfield, IL')).toEqual({ countries: [], regions: [] });
+  });
+
+  it('recognises gazetteer cities with their country', () => {
+    expect(resolvePlaces('Dublin').cities).toEqual([{ country: 'IE', name: 'Dublin' }]);
+    expect(resolvePlaces('İSTANBUL (Hybrid)').cities).toEqual([
+      { country: 'TR', name: 'Istanbul' },
+    ]);
+    expect(resolvePlaces('Bangalore').cities).toEqual([{ country: 'IN', name: 'Bengaluru' }]);
+    expect(places('Washington, D.C.').countries).toEqual(['US']);
+    expect(places('UAE, Dubai').countries).toEqual(['AE']);
+  });
+
+  it('leaves city names shared across countries unresolved', () => {
+    for (const text of ['Cambridge', 'Hyderabad', 'San Jose', 'Valencia']) {
       expect(places(text), text).toEqual({ countries: [], regions: [] });
     }
-    expect(places('San Francisco, CA, US').countries).toEqual(['US']);
   });
 
   it('never matches substrings', () => {
@@ -66,12 +82,13 @@ describe('resolvePlaces', () => {
     expect(resolvePlaces('Remote, London UK')).toEqual({
       countries: [],
       regions: [],
+      cities: [],
       unresolved: ['london uk'],
     });
   });
 
   it('skips segments the caller already knows the meaning of', () => {
-    expect(places('Atlanta, Georgia').countries).toEqual(['GE']);
-    expect(resolvePlaces('Atlanta, Georgia', { skip: ['Georgia'] }).countries).toEqual([]);
+    expect(places('Atlanta, Georgia').countries).toEqual(['US', 'GE']);
+    expect(resolvePlaces('Atlanta, Georgia', { skip: ['Georgia'] }).countries).toEqual(['US']);
   });
 });

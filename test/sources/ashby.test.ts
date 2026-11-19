@@ -58,7 +58,7 @@ describe('ashby.normalize — location claims', () => {
   it('reads every secondary location, including ones with no address', () => {
     const posting = normalized('jobs.funnelfox.com', 'Fullstack Engineer');
     expect(claims(posting)).toEqual(
-      expect.arrayContaining(['remote_region TR', 'remote_region KZ', 'remote_region TH']),
+      expect.arrayContaining(['remote_region TR', 'remote_region KZ Almaty', 'remote_region TH']),
     );
   });
 

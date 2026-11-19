@@ -25,7 +25,7 @@
         "kind": "remote_region",
         "countryCode": "AM",
         "region": null,
-        "city": null,
+        "city": "Yerevan",
         "raw": "Yerevan, Armenia [Armenia]"
       },
       {
@@ -46,8 +46,15 @@
         "kind": "remote_region",
         "countryCode": "KZ",
         "region": null,
-        "city": null,
+        "city": "Almaty",
         "raw": "Almaty, Kazakhstan"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "AM",
+        "region": null,
+        "city": null,
+        "raw": "Armenia"
       },
       {
         "kind": "remote_region",
@@ -65,6 +72,13 @@
       },
       {
         "kind": "remote_region",
+        "countryCode": "GE",
+        "region": null,
+        "city": "Tbilisi",
+        "raw": "Tbilisi, Georgia"
+      },
+      {
+        "kind": "remote_region",
         "countryCode": "TH",
         "region": null,
         "city": null,
@@ -72,9 +86,16 @@
       },
       {
         "kind": "remote_region",
+        "countryCode": "GE",
+        "region": null,
+        "city": "Batumi",
+        "raw": "Batumi, Georgia"
+      },
+      {
+        "kind": "remote_region",
         "countryCode": "ES",
         "region": null,
-        "city": null,
+        "city": "Barcelona",
         "raw": "Barcelona, Spain [Spain]"
       }
     ],
