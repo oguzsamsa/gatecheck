@@ -121,6 +121,11 @@ describe('matchesKeywords', () => {
     expect(matchesKeywords('Senior ENGINEER', ['engineer'])).toBe(true);
     expect(matchesKeywords('Designer', ['engineer', 'developer'])).toBe(false);
     expect(matchesKeywords('Designer', [])).toBe(true);
+    expect(
+      matchesKeywords('Senior Site Reliability Engineer', ['engineer'], ['site reliability']),
+    ).toBe(false);
+    expect(matchesKeywords('Backend Engineer', ['engineer'], ['site reliability'])).toBe(true);
+    expect(matchesKeywords('Sales Engineer', [], ['sales engineer'])).toBe(false);
   });
 });
 

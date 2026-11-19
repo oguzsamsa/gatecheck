@@ -38,6 +38,11 @@ const ConfigSchema = z.object({
        * are announced. Everything is still stored and evaluated.
        */
       titleKeywords: z.array(z.string().min(1)).default([]),
+      /**
+       * Case-insensitive words that veto a title even when it matches `titleKeywords`
+       * ("site reliability", "sales engineer"). Same scope: announcing, not storing.
+       */
+      excludeTitleKeywords: z.array(z.string().min(1)).optional(),
       /** Labelled in the digest when a posting's band tops out below it. Never a filter. */
       salaryFloor: z
         .object({

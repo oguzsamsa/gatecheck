@@ -84,7 +84,7 @@ export function collectDigest(db: Db, runId: number, profile: Profile): Digest {
     )
     .orderBy(company.name, posting.title)
     .all()
-    .filter((r) => matchesKeywords(r.title, profile.titleKeywords));
+    .filter((r) => matchesKeywords(r.title, profile.titleKeywords, profile.excludeTitleKeywords));
 
   const salaries = Map.groupBy(
     rows.length === 0
@@ -170,7 +170,7 @@ function collectChanges(db: Db, profile: Profile): ChangeItem[] {
     .where(and(isNull(postingChange.notifiedAt), gt(postingChange.detectedAt, notification.sentAt)))
     .orderBy(company.name, posting.title, postingChange.id)
     .all()
-    .filter((r) => matchesKeywords(r.title, profile.titleKeywords));
+    .filter((r) => matchesKeywords(r.title, profile.titleKeywords, profile.excludeTitleKeywords));
 
   return [...Map.groupBy(rows, (r) => r.postingId).values()].map((group) => {
     const first = group[0] ?? rows[0];
@@ -198,10 +198,15 @@ function describeChange(c: { kind: string; before: string; after: string }): str
   }
 }
 
-export function matchesKeywords(title: string, keywords: readonly string[]): boolean {
-  if (keywords.length === 0) return true;
+/** Whether a title has one of `keywords` (any, when empty) and none of `exclude`. */
+export function matchesKeywords(
+  title: string,
+  keywords: readonly string[],
+  exclude: readonly string[] = [],
+): boolean {
   const t = title.toLocaleLowerCase('en');
-  return keywords.some((k) => t.includes(k.toLocaleLowerCase('en')));
+  const has = (k: string) => t.includes(k.toLocaleLowerCase('en'));
+  return (keywords.length === 0 || keywords.some(has)) && !exclude.some(has);
 }
 
 type Band = typeof compensation.$inferSelect;

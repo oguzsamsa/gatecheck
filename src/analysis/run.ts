@@ -34,6 +34,7 @@ export interface AnalyzeDeps {
   applicant: CountryCode;
   profile: string;
   titleKeywords: readonly string[];
+  excludeTitleKeywords?: readonly string[];
   draftsDir: string | null;
   now?: () => Date;
 }
@@ -57,7 +58,11 @@ interface Candidate {
 }
 
 /** Open/unknown postings whose latest version has not been analysed yet; open ones first. */
-function candidates(db: Db, keywords: readonly string[]): Candidate[] {
+function candidates(
+  db: Db,
+  keywords: readonly string[],
+  exclude: readonly string[] = [],
+): Candidate[] {
   const rows = db
     .select({
       postingId: posting.id,
@@ -76,7 +81,7 @@ function candidates(db: Db, keywords: readonly string[]): Candidate[] {
     .leftJoin(analysis, eq(analysis.postingId, posting.id))
     .where(and(isNull(posting.closedAt), inArray(eligibility.verdict, ['open', 'unknown'])))
     .all()
-    .filter((r) => matchesKeywords(r.title, keywords));
+    .filter((r) => matchesKeywords(r.title, keywords, exclude));
 
   const out: Candidate[] = [];
   for (const r of rows) {
@@ -132,7 +137,7 @@ export async function analyzePending(
 ): Promise<AnalyzeReport> {
   const { db } = deps;
   const now = deps.now ?? (() => new Date());
-  const pending = candidates(db, deps.titleKeywords);
+  const pending = candidates(db, deps.titleKeywords, deps.excludeTitleKeywords);
   const report: AnalyzeReport = { analyzed: [], failed: [], pending: pending.length };
   const system = systemPrompt(deps.applicant, deps.profile);
 

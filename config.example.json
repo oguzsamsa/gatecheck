@@ -33,6 +33,7 @@
   ],
   "profile": {
     "titleKeywords": ["engineer", "developer"],
+    "excludeTitleKeywords": ["site reliability", "sales engineer", "support engineer"],
     "salaryFloor": {
       "amount": 60000,
       "currency": "EUR",

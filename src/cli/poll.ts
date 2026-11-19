@@ -49,6 +49,7 @@ try {
         applicant: config.applicant.country,
         profile: readProfile(a.profileFile),
         titleKeywords: config.profile.titleKeywords,
+        excludeTitleKeywords: config.profile.excludeTitleKeywords,
         draftsDir: a.draftsDir,
       },
       { limit: a.maxPerRun },
