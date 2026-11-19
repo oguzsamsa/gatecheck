@@ -90,6 +90,29 @@ company from its careers page, including boards embedded under a custom domain.
 LinkedIn (its terms forbid automated collection) and Jobgether (paywalled) are deliberately
 not used, and pages behind bot protection are not worked around.
 
+### Reading the text (optional)
+
+Structure decides the verdict; some things only the prose says. `pnpm analyze` sends each
+posting that passed — open or unknown — to Claude once, with the applicant's own profile
+(`profile.md`, gitignored; see `profile.example.md`), and gets back a structured reading:
+fit, location wording in the text ("we hire through Deel in your country of residence",
+"pay reflects market standards in your region"), requirements met or missing, and a short
+draft note.
+
+The draft is kept honest mechanically. Every claim it makes about the applicant must cite a
+verbatim quote from the profile, and claims the profile doesn't support — or says not to
+make — are listed as left out instead of used. A grounding check then looks every quote up
+in the profile; a draft with an unbacked claim is flagged in the digest and the dashboard.
+The model never changes a verdict, and nothing is ever sent: drafts are files in
+`data/drafts/` for a human to edit.
+
+### Dashboard
+
+`pnpm dashboard` serves a small Next.js app over the same SQLite file, read-only: every
+posting with its verdict and reason, places, salary and fit, filterable by verdict, text,
+company and country, and a page per posting with its claims, draft, change history and
+stored versions.
+
 ## Polling etiquette
 
 gatecheck reads the same public, unauthenticated endpoints that companies' own career pages
@@ -125,9 +148,13 @@ pnpm poll --dry-run                  # poll, evaluate, print the digest instead 
 pnpm poll                            # the real thing
 pnpm launchd install --hour 9        # macOS: run it every morning
 pnpm discover weworkremotely --keyword engineer --dry-run   # find more companies to watch
+pnpm analyze --limit 3               # optional: read top postings with Claude, write drafts
+pnpm dashboard                       # browse everything at http://localhost:3000
 ```
 
-`config.json` is gitignored. The Telegram token and chat id can also come from
+`config.json` and `profile.md` are gitignored. Analysis needs Anthropic API credentials
+(`ANTHROPIC_API_KEY`, or a profile from `ant auth login`) and costs one request per
+posting; it is off unless `config.json` has an `analysis` section. The Telegram token and chat id can also come from
 `GATECHECK_TELEGRAM_BOT_TOKEN` / `GATECHECK_TELEGRAM_CHAT_ID`. To get them, create a bot
 with [@BotFather](https://t.me/BotFather), send it a message, and read your chat id from
 `https://api.telegram.org/bot<token>/getUpdates`.
