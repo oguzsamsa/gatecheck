@@ -11,6 +11,7 @@
   },
   "packageManager": "pnpm@12.21.0",
   "scripts": {
+    "poll": "node src/cli/poll.ts",
     "inspect": "node src/cli/inspect.ts",
     "db:generate": "drizzle-kit generate",
     "typecheck": "tsc --noEmit",

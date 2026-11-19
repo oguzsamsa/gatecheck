@@ -1,0 +1,18 @@
+{
+  "applicant": { "country": "TR" },
+  "database": "data/gatecheck.sqlite",
+  "watchlist": [
+    { "name": "Codeway", "ats": "ashby", "org": "codeway" },
+    {
+      "name": "FunnelFox",
+      "ats": "ashby",
+      "org": "jobs.funnelfox.com",
+      "careersUrl": "https://jobs.funnelfox.com"
+    }
+  ],
+  "profile": {
+    "titleKeywords": ["engineer", "developer"],
+    "salaryFloor": { "amount": 60000, "currency": "EUR", "period": "year" }
+  },
+  "telegram": { "botToken": "123456:replace-me", "chatId": "123456789" }
+}
