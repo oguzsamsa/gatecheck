@@ -22,7 +22,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",
-    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test",
+    "dashboard": "pnpm --filter gatecheck-dashboard dev",
+    "dashboard:build": "pnpm --filter gatecheck-dashboard build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "~1.5.0",
@@ -41,5 +43,11 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.73.0",
     "vitest": "^5.1.1"
+  },
+  "exports": {
+    "./db": "./src/db/readonly.ts",
+    "./schema": "./src/db/schema.ts",
+    "./queries": "./src/queries/postings.ts",
+    "./config": "./src/config.ts"
   }
 }

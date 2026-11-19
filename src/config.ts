@@ -93,7 +93,8 @@ export function parseConfig(input: unknown, env: NodeJS.ProcessEnv = process.env
 export function loadConfig(path = process.env.GATECHECK_CONFIG ?? 'config.json'): Config {
   let text: string;
   try {
-    text = readFileSync(path, 'utf8');
+    // A runtime path, not a build input: keeps the dashboard's bundler from tracing it.
+    text = readFileSync(/* turbopackIgnore: true */ path, 'utf8');
   } catch {
     throw new ConfigError(`no config at ${path} — copy config.example.json to config.json`);
   }

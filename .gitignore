@@ -15,3 +15,8 @@ config.json
 PLAN.md
 # Applicant profile fed to the analysis step (phase 3).
 profile.md
+
+# Dashboard build output.
+dashboard/.next/
+dashboard/next-env.d.ts
+*.tsbuildinfo

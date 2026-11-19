@@ -1,3 +1,5 @@
 pnpm-lock.yaml
 drizzle/meta/
 test/fixtures/
+dashboard/.next/
+dashboard/next-env.d.ts
