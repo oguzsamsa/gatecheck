@@ -1,0 +1,120 @@
+{
+  "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
+  "updatedAt": 1795093541,
+  "offset": 0,
+  "limit": 20,
+  "totalCount": 117859,
+  "nextCursor": "MjAyNi0xMS0xOVQxMzowMDoxNS44ODA3MjZafDI0ODk4ODY",
+  "jobs": [
+    {
+      "title": "Staff Field Engineer | US | Remote",
+      "excerpt": "Grafana Labs is the company behind Grafana Cloud, the fully managed observability platform trusted by more than 10,000 organizations to ensure reliability, reso…",
+      "companyName": "Grafana Labs",
+      "companySlug": "grafana-labs",
+      "companyLogo": "https://cdn-images.himalayas.app/3gt8m9qgtvfixh7a82o2nkx9hogm",
+      "employmentType": "Full Time",
+      "minSalary": 230000,
+      "maxSalary": 270000,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Senior"
+      ],
+      "currency": "USD",
+      "locationRestrictions": [
+        "United States"
+      ],
+      "timezoneRestrictions": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        14
+      ],
+      "categories": [
+        "Field-Engineer",
+        "Solutions-Engineer",
+        "Solutions-Architect",
+        "Site-Reliability-Engineer"
+      ],
+      "parentCategories": [
+        "Developer"
+      ],
+      "description": "<div class=\"content-intro\">\n<p><a href=\"https://himalayas.app/companies/grafana-labs\">Grafana Labs</a> is the company behind Grafana Cloud, the fully managed ob…",
+      "pubDate": 1795093541,
+      "expiryDate": 1800277539,
+      "applicationLink": "https://himalayas.app/companies/grafana-labs/jobs/staff-field-engineer-us-remote?utm_source=api",
+      "guid": "https://himalayas.app/companies/grafana-labs/jobs/staff-field-engineer-us-remote"
+    },
+    {
+      "title": "Senior Cloud Infrastructure Engineer",
+      "excerpt": "Job Description – Senior Cloud Infrastructure Engineer Location: Remote – Working EST (US Eastern Time Zone) Contract Duration: 12 Months (Dedicated, Full-Time …",
+      "companyName": "Optimal Growth Technologies",
+      "companySlug": "optimal-growth-technologies",
+      "companyLogo": "",
+      "employmentType": "Contractor",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Senior"
+      ],
+      "currency": null,
+      "locationRestrictions": [
+        "South Africa"
+      ],
+      "timezoneRestrictions": [
+        2
+      ],
+      "categories": [
+        "Cloud-Infrastructure-Engineer",
+        "Senior-Cloud-Infrastructure-Engineer",
+        "Azure-Cloud-Engineer",
+        "Cloud-Solutions-Architect",
+        "Infrastructure-Engineer"
+      ],
+      "parentCategories": [
+        "Developer"
+      ],
+      "description": "<p><strong>Job Description – Senior Cloud Infrastructure Engineer</strong></p><p><strong>Location: Remote – Working EST (US Eastern Time Zone)</strong></p><p><s…",
+      "pubDate": 1795093514,
+      "expiryDate": 1800277513,
+      "applicationLink": "https://himalayas.app/companies/optimal-growth-technologies/jobs/senior-cloud-infrastructure-engineer?utm_source=api",
+      "guid": "https://himalayas.app/companies/optimal-growth-technologies/jobs/senior-cloud-infrastructure-engineer"
+    },
+    {
+      "title": "Country SME - Program Compliance (ICO)",
+      "excerpt": "What You’ll Do As a Country SME within Avalara's International Compliance Operations team, you'll help ensure accurate, scalable VAT compliance delivery across …",
+      "companyName": "Avalara",
+      "companySlug": "avalara",
+      "companyLogo": "https://cdn-images.himalayas.app/i48z1nnj21ax5qzvo9v2czh1u83w",
+      "employmentType": "Full Time",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Senior"
+      ],
+      "currency": null,
+      "locationRestrictions": [
+        "United Kingdom"
+      ],
+      "timezoneRestrictions": [
+        0
+      ],
+      "categories": [
+        "Tax-Compliance-Specialist",
+        "VAT-Specialist",
+        "Tax-Compliance-Manager",
+        "Indirect-Tax-Specialist"
+      ],
+      "parentCategories": [],
+      "description": "<h3>What You’ll Do</h3><p>As a Country SME within <a href=\"https://himalayas.app/companies/avalara\">Avalara</a>'s International Compliance Operations team, you'…",
+      "pubDate": 1795093492,
+      "expiryDate": 1800277491,
+      "applicationLink": "https://himalayas.app/companies/avalara/jobs/country-sme-program-compliance-ico?utm_source=api",
+      "guid": "https://himalayas.app/companies/avalara/jobs/country-sme-program-compliance-ico"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss">
+  <channel>
+    <title>We Work Remotely: Full-Stack Programming Jobs</title>
+    <link>https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss</link>
+    <description>We Work Remotely: Full-Stack Programming Jobs</description>
+    <language>en-US</language>
+    <ttl>60</ttl>
+    <item>
+      <title>Proxify AB: Senior Fullstack Developer (React.js / Node.js)</title>
+      <region>Anywhere in the World</region>
+      <country></country>
+      <state>Stockholm</state>
+      <skills>JavaScript, Node.js, React, and Full Stack Dev</skills>
+      <category>Full-Stack Programming</category>
+      <type>Full-Time</type>
+      <description>
+
+&lt;p&gt;
+  &lt;strong&gt;Headquarters:&lt;/strong&gt; Sweden
+    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href="http://career.proxify.io"&gt;http:…</description>
+      <pubDate>Thu, 19 Nov 2026 10:40:24 +0000</pubDate>
+      <expires_at>Sat, 19 Dec 2026 10:40:24 +0000</expires_at>
+      <guid>https://weworkremotely.com/remote-jobs/proxify-ab-senior-fullstack-developer-react-js-node-js-6</guid>
+      <link>https://weworkremotely.com/remote-jobs/proxify-ab-senior-fullstack-developer-react-js-node-js-6</link>
+    </item>
+    <item>
+      <title>CircleCI: Senior Software Engineer, Query</title>
+      <region>Anywhere in the World</region>
+      <country></country>
+      <state></state>
+      <skills></skills>
+      <category>Full-Stack Programming</category>
+      <type>Full-Time</type>
+      <description>
+
+&lt;p&gt;
+  &lt;strong&gt;Headquarters:&lt;/strong&gt; Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid
+&lt;/p…</description>
+      <pubDate>Thu, 19 Nov 2026 06:01:49 +0000</pubDate>
+      <expires_at>Sat, 19 Dec 2026 06:01:49 +0000</expires_at>
+      <guid>https://weworkremotely.com/remote-jobs/circleci-senior-software-engineer-query</guid>
+      <link>https://weworkremotely.com/remote-jobs/circleci-senior-software-engineer-query</link>
+    </item>
+    <item>
+      <title>Gemini: Senior Data Engineer</title>
+      <region>Anywhere in the World</region>
+      <country></country>
+      <state></state>
+      <skills></skills>
+      <category>Full-Stack Programming</category>
+      <type>Full-Time</type>
+      <description>
+
+&lt;p&gt;
+  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, New York; Miami, Florida; Remote (USA)
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;About the Company…</description>
+      <pubDate>Thu, 19 Nov 2026 06:01:49 +0000</pubDate>
+      <expires_at>Sat, 19 Dec 2026 06:01:49 +0000</expires_at>
+      <guid>https://weworkremotely.com/remote-jobs/gemini-senior-data-engineer</guid>
+      <link>https://weworkremotely.com/remote-jobs/gemini-senior-data-engineer</link>
+    </item>
+  </channel>
+</rss>

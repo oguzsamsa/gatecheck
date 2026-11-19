@@ -204,3 +204,14 @@ export const notification = sqliteTable(
   // The dedupe guarantee: a posting is announced at most once per channel.
   (t) => [uniqueIndex('notification_posting_channel_uq').on(t.postingId, t.channel)],
 );
+
+/**
+ * Companies seen on an aggregator whose board could not be found. Remembered so discovery
+ * does not probe the same names every run; retried after a while.
+ */
+export const discoveryMiss = sqliteTable('discovery_miss', {
+  /** Folded company name. */
+  nameKey: text().primaryKey(),
+  name: text().notNull(),
+  lastTriedAt: timestamp().notNull(),
+});
