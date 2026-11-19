@@ -1,0 +1,130 @@
+{
+  "jobs": [
+    {
+      "id": "abd1360f-bd9d-4649-ac02-9af2a437ff98",
+      "title": "Chief Compliance Officer, Ramp Advisory LLC",
+      "department": "Compliance",
+      "team": "Compliance",
+      "employmentType": "FullTime",
+      "location": "New York, NY (HQ)",
+      "shouldDisplayCompensationOnJobPostings": true,
+      "secondaryLocations": [
+        {
+          "location": "Remote (US or Canada)",
+          "address": {
+            "postalAddress": {}
+          }
+        },
+        {
+          "location": "San Francisco, CA",
+          "address": {
+            "postalAddress": {
+              "addressRegion": "California ",
+              "addressCountry": "USA",
+              "addressLocality": "San Fransisco"
+            }
+          }
+        },
+        {
+          "location": "Miami, FL",
+          "address": {
+            "postalAddress": {
+              "addressRegion": "Florida",
+              "addressCountry": "USA",
+              "addressLocality": "Miami"
+            }
+          }
+        }
+      ],
+      "publishedAt": "2026-10-16T21:05:12.511+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Hybrid",
+      "address": {
+        "postalAddress": {
+          "addressRegion": "NY",
+          "addressCountry": "USA",
+          "addressLocality": "New York City"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/ramp/abd1360f-bd9d-4649-ac02-9af2a437ff98",
+      "applyUrl": "https://jobs.ashbyhq.com/ramp/abd1360f-bd9d-4649-ac02-9af2a437ff98/application",
+      "descriptionHtml": "<h1><strong>About Ramp</strong></h1><p style=\"min-height:1.5em\">Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of…",
+      "descriptionPlain": "ABOUT RAMP\n\nRamp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how ove…",
+      "compensation": {
+        "compensationTierSummary": "$170K – $300K • Offers Equity • Multiple Ranges",
+        "scrapeableCompensationSalarySummary": "$170K - $300K",
+        "compensationTiers": [
+          {
+            "id": "3ed243c1-ec75-4e63-a29e-d82eac55172a",
+            "tierSummary": "Target Base Salary $185K – $300K • Offers Equity",
+            "title": "SF/NY",
+            "additionalInformation": null,
+            "components": [
+              {
+                "id": "fd8d8aa2-d303-4956-b5d6-f6ad9a233fcc",
+                "summary": "Target Base Salary $185K – $300K",
+                "compensationType": "Salary",
+                "interval": "1 YEAR",
+                "currencyCode": "USD",
+                "minValue": 185000,
+                "maxValue": 300000
+              },
+              {
+                "id": "d7e82592-5668-4cf7-b74e-c9291f7e8dee",
+                "summary": "Offers Equity",
+                "compensationType": "EquityCashValue",
+                "interval": "1 YEAR",
+                "currencyCode": "USD",
+                "minValue": null,
+                "maxValue": null
+              }
+            ]
+          },
+          {
+            "id": "3a74e871-55ca-4b10-a930-b5bb03cec0a8",
+            "tierSummary": "Target Base Salary $170K – $250K • Offers Equity",
+            "title": "Nationwide",
+            "additionalInformation": null,
+            "components": [
+              {
+                "id": "9cce426b-c9d4-4248-a7ac-4c530debdbcd",
+                "summary": "Target Base Salary $170K – $250K",
+                "compensationType": "Salary",
+                "interval": "1 YEAR",
+                "currencyCode": "USD",
+                "minValue": 170000,
+                "maxValue": 250000
+              },
+              {
+                "id": "d9e09f4e-f32b-4325-91b3-51be379e6d93",
+                "summary": "Offers Equity",
+                "compensationType": "EquityCashValue",
+                "interval": "1 YEAR",
+                "currencyCode": "USD",
+                "minValue": null,
+                "maxValue": null
+              }
+            ]
+          }
+        ],
+        "summaryComponents": [
+          {
+            "minValue": 170000,
+            "maxValue": 300000,
+            "currencyCode": "USD",
+            "interval": "1 YEAR",
+            "compensationType": "Salary"
+          },
+          {
+            "compensationType": "EquityCashValue",
+            "minValue": null,
+            "maxValue": null,
+            "interval": "1 YEAR"
+          }
+        ]
+      }
+    }
+  ],
+  "apiVersion": "1"
+}

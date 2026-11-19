@@ -1,0 +1,183 @@
+{
+  "jobs": [
+    {
+      "id": "80a981e4-1518-4af8-8288-13d44a443aa6",
+      "title": "Fullstack Engineer",
+      "department": "FunnelFox",
+      "team": "Funnels (FF)",
+      "employmentType": "FullTime",
+      "location": "Remote",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [
+        {
+          "location": "Remote",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Georgia"
+            }
+          }
+        },
+        {
+          "location": "Yerevan, Armenia",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Armenia"
+            }
+          }
+        },
+        {
+          "location": "Warsaw, Poland",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Poland",
+              "addressLocality": "Warsaw"
+            }
+          }
+        },
+        {
+          "location": "Belgrade, Serbia",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Serbia",
+              "addressLocality": "Belgrade"
+            }
+          }
+        },
+        {
+          "location": "Almaty, Kazakhstan",
+          "address": null
+        },
+        {
+          "location": "Armenia",
+          "address": null
+        },
+        {
+          "location": "Remote (Poland)",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Poland"
+            }
+          }
+        },
+        {
+          "location": "Turkey",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Turkey"
+            }
+          }
+        },
+        {
+          "location": "Tbilisi, Georgia",
+          "address": null
+        },
+        {
+          "location": "Thailand",
+          "address": null
+        },
+        {
+          "location": "Batumi, Georgia",
+          "address": null
+        },
+        {
+          "location": "Barcelona, Spain",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Spain"
+            }
+          }
+        }
+      ],
+      "publishedAt": "2026-10-28T10:09:11.051+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "address": {
+        "postalAddress": {
+          "addressCountry": "Serbia"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/jobs.funnelfox.com/80a981e4-1518-4af8-8288-13d44a443aa6",
+      "applyUrl": "https://jobs.ashbyhq.com/jobs.funnelfox.com/80a981e4-1518-4af8-8288-13d44a443aa6/application",
+      "descriptionHtml": "<p style=\"min-height:1.5em\"><strong>About FunnelFox</strong></p><p style=\"min-height:1.5em\">FunnelFox is a complete growth solution for subscription apps. With …",
+      "descriptionPlain": "About FunnelFox\n\nFunnelFox is a complete growth solution for subscription apps. With visibility across 1,000+ apps and $2B in processed revenue, our growth agen…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    },
+    {
+      "id": "f1a4b344-c62a-4d6f-946d-c79ab560ef6f",
+      "title": "Payment Specialist",
+      "department": "FunnelFox",
+      "team": "Solution Engineering",
+      "employmentType": "FullTime",
+      "location": "Remote",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [
+        {
+          "location": "Remote",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Georgia"
+            }
+          }
+        },
+        {
+          "location": "Remote",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Spain"
+            }
+          }
+        },
+        {
+          "location": "Remote",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Portugal"
+            }
+          }
+        },
+        {
+          "location": "Remote",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Poland"
+            }
+          }
+        },
+        {
+          "location": "Remote",
+          "address": {
+            "postalAddress": {
+              "addressCountry": "Turkey"
+            }
+          }
+        }
+      ],
+      "publishedAt": "2026-11-09T08:13:50.558+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "address": {
+        "postalAddress": {
+          "addressCountry": "Serbia"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/jobs.funnelfox.com/f1a4b344-c62a-4d6f-946d-c79ab560ef6f",
+      "applyUrl": "https://jobs.ashbyhq.com/jobs.funnelfox.com/f1a4b344-c62a-4d6f-946d-c79ab560ef6f/application",
+      "descriptionHtml": "<p style=\"min-height:1.5em\"><strong>About FunnelFox</strong></p><p style=\"min-height:1.5em\">FunnelFox is a complete growth solution for subscription apps. With …",
+      "descriptionPlain": "About FunnelFox\n\nFunnelFox is a complete growth solution for subscription apps. With visibility across 1,000+ apps and $2B in processed revenue, our growth agen…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    }
+  ],
+  "apiVersion": "1"
+}

@@ -1,0 +1,65 @@
+{
+  "jobs": [
+    {
+      "id": "db808740-242e-4a40-ad43-d41f26c049d7",
+      "title": " Technical Support Engineer",
+      "department": "Support Engineering",
+      "team": "Support Engineering",
+      "employmentType": "FullTime",
+      "location": "Remote",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [],
+      "publishedAt": "2026-11-06T15:25:28.875+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "address": {
+        "postalAddress": {
+          "addressCountry": "US | EU"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/PostHog/db808740-242e-4a40-ad43-d41f26c049d7",
+      "applyUrl": "https://jobs.ashbyhq.com/PostHog/db808740-242e-4a40-ad43-d41f26c049d7/application",
+      "descriptionHtml": "<h2>About PostHog</h2><p style=\"min-height:1.5em\">PostHog is your product’s context layer. It ingests and stores your analytics, errors, replays, and business d…",
+      "descriptionPlain": "ABOUT POSTHOG\n\nPostHog is your product’s context layer. It ingests and stores your analytics, errors, replays, and business data so you and your agents can quer…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    },
+    {
+      "id": "8dc3f33a-b930-4c54-b4c4-3e6bd2ff28d3",
+      "title": "AI Research Engineer",
+      "department": "Engineering",
+      "team": "PostHog AI",
+      "employmentType": "FullTime",
+      "location": "Hybrid (UK)",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [],
+      "publishedAt": "2026-08-18T19:01:08.379+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Hybrid",
+      "address": {
+        "postalAddress": {
+          "addressRegion": "",
+          "addressCountry": "United Kingdom",
+          "addressLocality": "Cambridge"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/PostHog/8dc3f33a-b930-4c54-b4c4-3e6bd2ff28d3",
+      "applyUrl": "https://jobs.ashbyhq.com/PostHog/8dc3f33a-b930-4c54-b4c4-3e6bd2ff28d3/application",
+      "descriptionHtml": "<h2>About PostHog</h2><p style=\"min-height:1.5em\">PostHog is your product’s context layer. It ingests and stores your analytics, errors, replays, and business d…",
+      "descriptionPlain": "ABOUT POSTHOG\n\nPostHog is your product’s context layer. It ingests and stores your analytics, errors, replays, and business data so you and your agents can quer…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    }
+  ],
+  "apiVersion": "1"
+}

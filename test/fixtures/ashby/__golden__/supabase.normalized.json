@@ -1,0 +1,56 @@
+[
+  {
+    "atsPostingId": "3b5d54ca-741b-45ac-bd3f-31605a0d3541",
+    "title": "AI Platform Engineer",
+    "url": "https://jobs.ashbyhq.com/supabase/3b5d54ca-741b-45ac-bd3f-31605a0d3541",
+    "department": "Business Operations",
+    "employmentType": "full_time",
+    "postedAt": "2026-07-31T18:56:39.246Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": null,
+        "region": "WORLDWIDE",
+        "city": null,
+        "raw": "Remote, Global"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "c01f7436-1fdd-4a3e-8b96-8cadc33b006e",
+    "title": "Support Engineer (EMEA)",
+    "url": "https://jobs.ashbyhq.com/supabase/c01f7436-1fdd-4a3e-8b96-8cadc33b006e",
+    "department": "Support",
+    "employmentType": "full_time",
+    "postedAt": "2025-05-30T20:36:32.528Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": null,
+        "region": "EMEA",
+        "city": null,
+        "raw": "Remote, EMEA"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "a1320bbf-bfae-49a8-a1b7-12eeccaf39ca",
+    "title": "Developer Relations Engineer",
+    "url": "https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca",
+    "department": "Marketing",
+    "employmentType": "full_time",
+    "postedAt": "2026-08-21T03:26:51.465Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": "US",
+        "region": null,
+        "city": "San Francisco",
+        "raw": "Remote, San Francisco, CA, US [San Francisco, California, United States]"
+      }
+    ],
+    "compensation": []
+  }
+]

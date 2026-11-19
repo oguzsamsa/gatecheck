@@ -1,0 +1,39 @@
+{
+  "name": "gatecheck",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "repository": "github:oguzsamsa/gatecheck",
+  "description": "Reads ATS public job-board JSON and tells you which postings are actually open to you.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "inspect": "node src/cli/inspect.ts",
+    "db:generate": "drizzle-kit generate",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.2.0",
+    "drizzle-orm": "^0.45.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.20.5",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+*.log
+.DS_Store
+
+# Local state: fetched postings are never committed.
+data/
+*.sqlite
+*.sqlite-*
+
+# Personal profile (salary floor, target roles, CV path, Telegram token).
+config.json
+.env
+
+# Private planning notes (reference other projects and personal context).
+PLAN.md

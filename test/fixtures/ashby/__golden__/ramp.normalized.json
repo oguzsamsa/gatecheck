@@ -1,0 +1,56 @@
+[
+  {
+    "atsPostingId": "abd1360f-bd9d-4649-ac02-9af2a437ff98",
+    "title": "Chief Compliance Officer, Ramp Advisory LLC",
+    "url": "https://jobs.ashbyhq.com/ramp/abd1360f-bd9d-4649-ac02-9af2a437ff98",
+    "department": "Compliance",
+    "employmentType": "full_time",
+    "postedAt": "2026-10-16T21:05:12.511Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "New York City",
+        "raw": "New York, NY (HQ) [New York City, NY, USA]"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "US",
+        "region": null,
+        "city": null,
+        "raw": "Remote (US or Canada)"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "CA",
+        "region": null,
+        "city": null,
+        "raw": "Remote (US or Canada)"
+      },
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "San Fransisco",
+        "raw": "San Francisco, CA [San Fransisco, California, USA]"
+      },
+      {
+        "kind": "office",
+        "countryCode": "US",
+        "region": null,
+        "city": "Miami",
+        "raw": "Miami, FL [Miami, Florida, USA]"
+      }
+    ],
+    "compensation": [
+      {
+        "min": 170000,
+        "max": 300000,
+        "currency": "USD",
+        "period": "year",
+        "source": "ashby.summaryComponents"
+      }
+    ]
+  }
+]

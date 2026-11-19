@@ -1,0 +1,88 @@
+{
+  "jobs": [
+    {
+      "id": "3b5d54ca-741b-45ac-bd3f-31605a0d3541",
+      "title": "AI Platform Engineer",
+      "department": "Business Operations",
+      "team": "Business Operations",
+      "employmentType": "FullTime",
+      "location": "Remote, Global",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [],
+      "publishedAt": "2026-07-31T18:56:39.246+00:00",
+      "isListed": true,
+      "isRemote": null,
+      "workplaceType": null,
+      "address": null,
+      "jobUrl": "https://jobs.ashbyhq.com/supabase/3b5d54ca-741b-45ac-bd3f-31605a0d3541",
+      "applyUrl": "https://jobs.ashbyhq.com/supabase/3b5d54ca-741b-45ac-bd3f-31605a0d3541/application",
+      "descriptionHtml": "<h2>About Supabase</h2><p style=\"min-height:1.5em\">Supabase is the Postgres development platform, built by developers for developers. We provide a complete back…",
+      "descriptionPlain": "ABOUT SUPABASE\n\nSupabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Au…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    },
+    {
+      "id": "c01f7436-1fdd-4a3e-8b96-8cadc33b006e",
+      "title": "Support Engineer (EMEA)",
+      "department": "Support",
+      "team": "Support",
+      "employmentType": "FullTime",
+      "location": "Remote, EMEA",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [],
+      "publishedAt": "2025-05-30T20:36:32.528+00:00",
+      "isListed": true,
+      "isRemote": null,
+      "workplaceType": null,
+      "address": {
+        "postalAddress": {}
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/supabase/c01f7436-1fdd-4a3e-8b96-8cadc33b006e",
+      "applyUrl": "https://jobs.ashbyhq.com/supabase/c01f7436-1fdd-4a3e-8b96-8cadc33b006e/application",
+      "descriptionHtml": "<p style=\"min-height:1.5em\">Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including …",
+      "descriptionPlain": "Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edg…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    },
+    {
+      "id": "a1320bbf-bfae-49a8-a1b7-12eeccaf39ca",
+      "title": "Developer Relations Engineer ",
+      "department": "Marketing",
+      "team": "Marketing",
+      "employmentType": "FullTime",
+      "location": "Remote, San Francisco, CA, US",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [],
+      "publishedAt": "2026-08-21T03:26:51.465+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "address": {
+        "postalAddress": {
+          "addressRegion": "California",
+          "addressCountry": "United States",
+          "addressLocality": "San Francisco"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca",
+      "applyUrl": "https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca/application",
+      "descriptionHtml": "<h2><strong>About Supabase</strong></h2><p style=\"min-height:1.5em\">Supabase is the Postgres development platform, built by developers for developers. We provid…",
+      "descriptionPlain": "ABOUT SUPABASE\n\nSupabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Au…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    }
+  ],
+  "apiVersion": "1"
+}

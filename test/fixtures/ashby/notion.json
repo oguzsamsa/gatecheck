@@ -1,0 +1,36 @@
+{
+  "jobs": [
+    {
+      "id": "43b37ac5-1ce9-4106-8df1-1ae8515087ee",
+      "title": "Enterprise Solutions Consultant (Atlanta, GA)",
+      "department": "Sales",
+      "team": "Solutions Consultant",
+      "employmentType": "FullTime",
+      "location": "Atlanta, Georgia",
+      "shouldDisplayCompensationOnJobPostings": false,
+      "secondaryLocations": [],
+      "publishedAt": "2026-07-27T13:01:22.995+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "address": {
+        "postalAddress": {
+          "addressRegion": "Georgia",
+          "addressCountry": "United States",
+          "addressLocality": "Atlanta"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/notion/43b37ac5-1ce9-4106-8df1-1ae8515087ee",
+      "applyUrl": "https://jobs.ashbyhq.com/notion/43b37ac5-1ce9-4106-8df1-1ae8515087ee/application",
+      "descriptionHtml": "<h1>Who We Are</h1><p style=\"min-height:1.5em\">Notion is the collaborative AI workspace where teams and agents <a target=\"_blank\" rel=\"noopener noreferrer nofol…",
+      "descriptionPlain": "WHO WE ARE\n\nNotion is the collaborative AI workspace where teams and agents think together https://www.youtube.com/watch?v=vkpYpWfEK5s. We're building one place…",
+      "compensation": {
+        "compensationTierSummary": null,
+        "scrapeableCompensationSalarySummary": null,
+        "compensationTiers": [],
+        "summaryComponents": []
+      }
+    }
+  ],
+  "apiVersion": "1"
+}

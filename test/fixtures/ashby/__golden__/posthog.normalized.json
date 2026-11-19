@@ -1,0 +1,45 @@
+[
+  {
+    "atsPostingId": "db808740-242e-4a40-ad43-d41f26c049d7",
+    "title": "Technical Support Engineer",
+    "url": "https://jobs.ashbyhq.com/PostHog/db808740-242e-4a40-ad43-d41f26c049d7",
+    "department": "Support Engineering",
+    "employmentType": "full_time",
+    "postedAt": "2026-11-06T15:25:28.875Z",
+    "locations": [
+      {
+        "kind": "remote_region",
+        "countryCode": null,
+        "region": "EU",
+        "city": null,
+        "raw": "Remote [US | EU]"
+      },
+      {
+        "kind": "remote_region",
+        "countryCode": "US",
+        "region": null,
+        "city": null,
+        "raw": "Remote [US | EU]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "8dc3f33a-b930-4c54-b4c4-3e6bd2ff28d3",
+    "title": "AI Research Engineer",
+    "url": "https://jobs.ashbyhq.com/PostHog/8dc3f33a-b930-4c54-b4c4-3e6bd2ff28d3",
+    "department": "Engineering",
+    "employmentType": "full_time",
+    "postedAt": "2026-08-18T19:01:08.379Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "GB",
+        "region": null,
+        "city": "Cambridge",
+        "raw": "Hybrid (UK) [Cambridge, United Kingdom]"
+      }
+    ],
+    "compensation": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "atsPostingId": "e039f968-aa6a-4df6-8d90-1cb931aef5b3",
+    "title": "Marketing Artist",
+    "url": "https://jobs.ashbyhq.com/codeway/e039f968-aa6a-4df6-8d90-1cb931aef5b3",
+    "department": "Creative",
+    "employmentType": "full_time",
+    "postedAt": "2026-07-06T05:01:11.319Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "TR",
+        "region": null,
+        "city": "Istanbul",
+        "raw": "Istanbul [Istanbul, Şişli, Turkey]"
+      }
+    ],
+    "compensation": []
+  },
+  {
+    "atsPostingId": "9eadc21d-6997-4be9-89ba-1bf934d24211",
+    "title": "HR Operations Specialist",
+    "url": "https://jobs.ashbyhq.com/codeway/9eadc21d-6997-4be9-89ba-1bf934d24211",
+    "department": "HQ",
+    "employmentType": "full_time",
+    "postedAt": "2026-07-06T05:01:11.319Z",
+    "locations": [
+      {
+        "kind": "office",
+        "countryCode": "TR",
+        "region": null,
+        "city": "Istanbul",
+        "raw": "Istanbul [Istanbul, Şişli, Turkey]"
+      }
+    ],
+    "compensation": []
+  }
+]
