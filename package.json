@@ -13,6 +13,7 @@
   "scripts": {
     "poll": "node src/cli/poll.ts",
     "inspect": "node src/cli/inspect.ts",
+    "launchd": "node src/cli/launchd.ts",
     "db:generate": "drizzle-kit generate",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
