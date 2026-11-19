@@ -137,13 +137,14 @@ const item = (postingId: number, over: Partial<DigestItem> = {}): DigestItem => 
 
 describe('renderDigest', () => {
   it('says nothing when there is nothing new', () => {
-    expect(renderDigest({ open: [], unknown: [], errors: [] })).toEqual([]);
+    expect(renderDigest({ open: [], unknown: [], changes: [], errors: [] })).toEqual([]);
   });
 
   it('renders sections, escapes HTML and tracks the postings it carries', () => {
     const [message, ...rest] = renderDigest({
       open: [item(1, { title: 'C++ <Engine> & Tools' })],
       unknown: [item(2, { company: 'Globex', reason: 'EUROPE may or may not include Türkiye' })],
+      changes: [],
       errors: [{ company: 'Initech', source: 'ashby/initech', error: 'HTTP 404' }],
     });
 
@@ -169,7 +170,7 @@ describe('renderDigest', () => {
 
   it('splits long digests between postings, never inside one', () => {
     const open = Array.from({ length: 60 }, (_, i) => item(i + 1));
-    const messages = renderDigest({ open, unknown: [], errors: [] }, 500);
+    const messages = renderDigest({ open, unknown: [], changes: [], errors: [] }, 500);
 
     expect(messages.length).toBeGreaterThan(1);
     expect(messages.every((m) => m.text.length <= 500)).toBe(true);
@@ -189,7 +190,7 @@ describe('deliver', () => {
       Promise.resolve(new Response('{"ok":true}')),
     );
 
-    await deliver(db, target, [{ text: 'hello', postingIds: [id] }], t0, fetch);
+    await deliver(db, target, [{ text: 'hello', postingIds: [id], changeIds: [] }], t0, fetch);
 
     const [url, init] = fetch.mock.calls[0] ?? [];
     expect(url).toBe('https://api.telegram.org/botTOKEN/sendMessage');
@@ -216,8 +217,8 @@ describe('deliver', () => {
       db,
       target,
       [
-        { text: 'a', postingIds: [first] },
-        { text: 'b', postingIds: [second] },
+        { text: 'a', postingIds: [first], changeIds: [] },
+        { text: 'b', postingIds: [second], changeIds: [] },
       ],
       t0,
       fetch,

@@ -1,5 +1,6 @@
 import type { Db } from '../db/client.ts';
-import { notification } from '../db/schema.ts';
+import { inArray } from 'drizzle-orm';
+import { notification, postingChange } from '../db/schema.ts';
 import type { Message } from './render.ts';
 
 export interface TelegramTarget {
@@ -61,6 +62,12 @@ export async function deliver(
           })),
         )
         .onConflictDoNothing()
+        .run();
+    }
+    if (message.changeIds.length > 0) {
+      db.update(postingChange)
+        .set({ notifiedAt: now })
+        .where(inArray(postingChange.id, message.changeIds))
         .run();
     }
     delivered += message.postingIds.length;

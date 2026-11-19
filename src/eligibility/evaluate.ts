@@ -1,6 +1,6 @@
 import { inArray, isNull } from 'drizzle-orm';
 import type { Db } from '../db/client.ts';
-import { eligibility, locationClaim, posting, type Verdict } from '../db/schema.ts';
+import { eligibility, locationClaim, posting, postingChange, type Verdict } from '../db/schema.ts';
 import type { CountryCode } from '../geo/countries.ts';
 import { decide } from './rules.ts';
 
@@ -14,7 +14,8 @@ export interface VerdictChange {
 /**
  * Re-evaluates every open posting and stores the current verdict. Cheap enough to run in
  * full each time, which keeps verdicts consistent when the rules themselves change.
- * Returns the postings whose verdict changed (including first evaluations).
+ * Returns the postings whose verdict changed (including first evaluations); a change of an
+ * existing verdict is also recorded in posting_change.
  */
 export function evaluateOpenPostings(db: Db, applicant: CountryCode, now: Date): VerdictChange[] {
   const openIds = db
@@ -50,7 +51,19 @@ export function evaluateOpenPostings(db: Db, applicant: CountryCode, now: Date):
         })
         .run();
       const from = previous.get(postingId) ?? null;
-      if (from !== verdict) changes.push({ postingId, from, to: verdict, reason });
+      if (from === verdict) continue;
+      changes.push({ postingId, from, to: verdict, reason });
+      if (from !== null) {
+        tx.insert(postingChange)
+          .values({
+            postingId,
+            detectedAt: now,
+            kind: 'verdict',
+            before: from,
+            after: `${verdict}: ${reason}`,
+          })
+          .run();
+      }
     }
   });
   return changes;

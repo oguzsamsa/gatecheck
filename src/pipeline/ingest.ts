@@ -1,7 +1,14 @@
 import { and, desc, eq, isNull, notInArray } from 'drizzle-orm';
 import type { Db } from '../db/client.ts';
-import { compensation, locationClaim, posting, postingVersion } from '../db/schema.ts';
+import {
+  compensation,
+  locationClaim,
+  posting,
+  postingChange,
+  postingVersion,
+} from '../db/schema.ts';
 import type { NormalizedPosting } from '../domain/types.ts';
+import { diffPostings } from './diff.ts';
 import { contentHash } from './hash.ts';
 
 export interface FetchedPosting {
@@ -24,7 +31,8 @@ export interface IngestResult {
  *
  * - new posting → row + first version + claims
  * - same content hash → only `last_seen_at` moves
- * - different hash → new version; claims and compensation are replaced
+ * - different hash → new version; claims and compensation are replaced, and any change in
+ *   places, salary band or title is recorded in posting_change
  * - open posting missing from the board → closed; a closed one reappearing → reopened
  */
 export function ingestBoard(
@@ -49,7 +57,7 @@ export function ingestBoard(
       };
 
       const existing = tx
-        .select({ id: posting.id, closedAt: posting.closedAt })
+        .select({ id: posting.id, title: posting.title, closedAt: posting.closedAt })
         .from(posting)
         .where(and(eq(posting.companyId, companyId), eq(posting.atsPostingId, n.atsPostingId)))
         .get();
@@ -76,7 +84,30 @@ export function ingestBoard(
         .limit(1)
         .get();
       if (latest?.contentHash === hash) continue;
-      if (latest) result.changed++;
+      if (latest && existing) {
+        result.changed++;
+        const changes = diffPostings(
+          {
+            title: existing.title,
+            locations: tx
+              .select()
+              .from(locationClaim)
+              .where(eq(locationClaim.postingId, postingId))
+              .all(),
+            compensation: tx
+              .select()
+              .from(compensation)
+              .where(eq(compensation.postingId, postingId))
+              .all(),
+          },
+          n,
+        );
+        if (changes.length > 0) {
+          tx.insert(postingChange)
+            .values(changes.map((c) => ({ postingId, detectedAt: now, ...c })))
+            .run();
+        }
+      }
 
       tx.insert(postingVersion)
         .values({ postingId, fetchedAt: now, contentHash: hash, payloadJson: raw })

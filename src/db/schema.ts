@@ -215,3 +215,30 @@ export const discoveryMiss = sqliteTable('discovery_miss', {
   name: text().notNull(),
   lastTriedAt: timestamp().notNull(),
 });
+
+export const CHANGE_KINDS = ['locations', 'compensation', 'title', 'verdict'] as const;
+export type ChangeKind = (typeof CHANGE_KINDS)[number];
+
+/**
+ * What changed between two versions of a posting, in human terms — "removed TR",
+ * "EUR 60K–80K → 50K–70K", "open → closed". Announced once (`notified_at`) for postings
+ * that were announced before.
+ */
+export const postingChange = sqliteTable(
+  'posting_change',
+  {
+    id: integer().primaryKey({ autoIncrement: true }),
+    postingId: integer()
+      .notNull()
+      .references(() => posting.id, { onDelete: 'cascade' }),
+    detectedAt: timestamp().notNull(),
+    kind: text({ enum: CHANGE_KINDS }).notNull(),
+    before: text().notNull(),
+    after: text().notNull(),
+    notifiedAt: timestamp(),
+  },
+  (t) => [
+    index('posting_change_pending_idx').on(t.notifiedAt),
+    check('posting_change_kind_ck', oneOf('kind', CHANGE_KINDS)),
+  ],
+);

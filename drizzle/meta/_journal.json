@@ -15,6 +15,13 @@
       "when": 1795098530788,
       "tag": "0001_discovery_miss",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1795098751459,
+      "tag": "0002_posting_change",
+      "breakpoints": true
     }
   ]
 }

@@ -1,5 +1,6 @@
-import { and, eq, inArray, isNull, notExists } from 'drizzle-orm';
+import { and, eq, gt, inArray, isNull, notExists } from 'drizzle-orm';
 import type { Config } from '../config.ts';
+import { formatBand } from '../domain/format.ts';
 import type { Db } from '../db/client.ts';
 import {
   company,
@@ -7,8 +8,10 @@ import {
   eligibility,
   notification,
   posting,
+  postingChange,
   runSource,
 } from '../db/schema.ts';
+import { describeListChange } from '../pipeline/diff.ts';
 
 export interface DigestItem {
   postingId: number;
@@ -20,9 +23,20 @@ export interface DigestItem {
   belowFloor: boolean;
 }
 
+export interface ChangeItem {
+  postingId: number;
+  company: string;
+  title: string;
+  url: string;
+  /** One human-readable line per change, e.g. "Locations: removed TR (remote)". */
+  lines: string[];
+  changeIds: number[];
+}
+
 export interface Digest {
   open: DigestItem[];
   unknown: DigestItem[];
+  changes: ChangeItem[];
   errors: { company: string; source: string; error: string }[];
 }
 
@@ -30,8 +44,9 @@ type Profile = Config['profile'];
 
 /**
  * What to announce: open and unknown postings not yet sent on this channel (optionally
- * narrowed to titles matching the profile's keywords), plus this run's failing sources so
- * a silent gap never looks like "no new postings".
+ * narrowed to titles matching the profile's keywords); changes to postings you were
+ * already sent; and this run's failing sources, so a silent gap never looks like "no new
+ * postings".
  */
 export function collectDigest(db: Db, runId: number, profile: Profile): Digest {
   const rows = db
@@ -117,8 +132,60 @@ export function collectDigest(db: Db, runId: number, profile: Profile): Digest {
   return {
     open: items.filter((i) => i.verdict === 'open').map((i) => i.item),
     unknown: items.filter((i) => i.verdict === 'unknown').map((i) => i.item),
+    changes: collectChanges(db, profile),
     errors,
   };
+}
+
+/** Pending changes detected after the posting was announced, grouped per posting. */
+function collectChanges(db: Db, profile: Profile): ChangeItem[] {
+  const rows = db
+    .select({
+      id: postingChange.id,
+      kind: postingChange.kind,
+      before: postingChange.before,
+      after: postingChange.after,
+      postingId: posting.id,
+      title: posting.title,
+      url: posting.url,
+      company: company.name,
+    })
+    .from(postingChange)
+    .innerJoin(posting, eq(posting.id, postingChange.postingId))
+    .innerJoin(company, eq(company.id, posting.companyId))
+    .innerJoin(
+      notification,
+      and(eq(notification.postingId, posting.id), eq(notification.channel, 'telegram')),
+    )
+    .where(and(isNull(postingChange.notifiedAt), gt(postingChange.detectedAt, notification.sentAt)))
+    .orderBy(company.name, posting.title, postingChange.id)
+    .all()
+    .filter((r) => matchesKeywords(r.title, profile.titleKeywords));
+
+  return [...Map.groupBy(rows, (r) => r.postingId).values()].map((group) => {
+    const first = group[0] ?? rows[0];
+    return {
+      postingId: first?.postingId ?? 0,
+      company: first?.company ?? '',
+      title: first?.title ?? '',
+      url: first?.url ?? '',
+      lines: group.map(describeChange),
+      changeIds: group.map((r) => r.id),
+    };
+  });
+}
+
+function describeChange(c: { kind: string; before: string; after: string }): string {
+  switch (c.kind) {
+    case 'locations':
+      return `Locations: ${describeListChange(c.before, c.after)}`;
+    case 'compensation':
+      return `Salary: ${c.before} → ${c.after}`;
+    case 'title':
+      return `Title was "${c.before}"`;
+    default:
+      return `Verdict: ${c.before} → ${c.after}`;
+  }
 }
 
 export function matchesKeywords(title: string, keywords: readonly string[]): boolean {
@@ -128,13 +195,6 @@ export function matchesKeywords(title: string, keywords: readonly string[]): boo
 }
 
 type Band = typeof compensation.$inferSelect;
-
-function formatBand(b: Band): string {
-  const amount = (n: number | null) =>
-    n === null ? '?' : n >= 1000 ? `${Math.round(n / 100) / 10}K` : String(n);
-  const range = b.min === b.max ? amount(b.min) : `${amount(b.min)}–${amount(b.max)}`;
-  return `${b.currency ?? ''} ${range}${b.period ? ` / ${b.period}` : ''}`.trim();
-}
 
 /** Only comparable bands are judged; a different currency or period is never "below". */
 function isBelowFloor(b: Band, floor: Profile['salaryFloor']): boolean {

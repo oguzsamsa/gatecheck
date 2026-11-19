@@ -1,4 +1,4 @@
-import type { Digest, DigestItem } from './digest.ts';
+import type { ChangeItem, Digest, DigestItem } from './digest.ts';
 
 /** Telegram rejects messages above 4096 characters. */
 export const TELEGRAM_LIMIT = 4096;
@@ -7,6 +7,8 @@ export interface Message {
   text: string;
   /** Postings announced in this message — marked as notified once it is delivered. */
   postingIds: number[];
+  /** Changes announced in this message — marked as notified once it is delivered. */
+  changeIds: number[];
 }
 
 const escape = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -14,6 +16,7 @@ const escape = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').rep
 interface Block {
   lines: string[];
   postingIds: number[];
+  changeIds?: number[];
 }
 
 function itemBlock(item: DigestItem): Block {
@@ -51,13 +54,29 @@ function section(title: string, items: DigestItem[]): Block[] {
  * so a posting is never cut in half and each message knows exactly which postings it
  * carries. Returns no messages when there is nothing to say.
  */
+function changeBlocks(changes: ChangeItem[]): Block[] {
+  if (changes.length === 0) return [];
+  return [
+    { lines: ['', '<b>Changed since you saw them</b>'], postingIds: [] },
+    ...changes.map((c) => ({
+      lines: [
+        `• <a href="${escape(c.url)}">${escape(c.title)}</a> — ${escape(c.company)}`,
+        ...c.lines.map((l) => `   ${escape(l)}`),
+      ],
+      postingIds: [],
+      changeIds: c.changeIds,
+    })),
+  ];
+}
+
 export function renderDigest(digest: Digest, limit = TELEGRAM_LIMIT): Message[] {
-  const { open, unknown, errors } = digest;
-  if (open.length + unknown.length + errors.length === 0) return [];
+  const { open, unknown, changes, errors } = digest;
+  if (open.length + unknown.length + changes.length + errors.length === 0) return [];
 
   const summary = [
     `${open.length} open`,
     unknown.length > 0 && `${unknown.length} to check`,
+    changes.length > 0 && `${changes.length} changed`,
     errors.length > 0 && `${errors.length} source error${errors.length > 1 ? 's' : ''}`,
   ].filter(Boolean);
 
@@ -65,6 +84,7 @@ export function renderDigest(digest: Digest, limit = TELEGRAM_LIMIT): Message[] 
     { lines: [`<b>gatecheck</b> · ${summary.join(' · ')}`], postingIds: [] },
     ...section('Open to you', open),
     ...section('Worth a look — eligibility unclear', unknown),
+    ...changeBlocks(changes),
   ];
   if (errors.length > 0) {
     blocks.push({ lines: ['', '<b>Sources with errors</b>'], postingIds: [] });
@@ -79,16 +99,21 @@ export function renderDigest(digest: Digest, limit = TELEGRAM_LIMIT): Message[] 
   const messages: Message[] = [];
   let lines: string[] = [];
   let ids: number[] = [];
+  let changeIds: number[] = [];
   const flush = () => {
-    if (lines.length > 0) messages.push({ text: lines.join('\n').trim(), postingIds: ids });
+    if (lines.length > 0) {
+      messages.push({ text: lines.join('\n').trim(), postingIds: ids, changeIds });
+    }
     lines = [];
     ids = [];
+    changeIds = [];
   };
   for (const block of blocks) {
     const text = block.lines.join('\n');
     if (lines.length > 0 && [...lines, text].join('\n').length > limit) flush();
     lines.push(text);
     ids.push(...block.postingIds);
+    changeIds.push(...(block.changeIds ?? []));
   }
   flush();
   return messages;
