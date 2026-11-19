@@ -4,12 +4,20 @@
  */
 import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
+import { parseArgs } from 'node:util';
 import { ConfigError, loadConfig } from '../config.ts';
 import { openDb } from '../db/client.ts';
 import { evaluateOpenPostings } from '../eligibility/evaluate.ts';
+import { collectDigest } from '../notify/digest.ts';
+import { renderDigest } from '../notify/render.ts';
+import { deliver, TelegramError } from '../notify/telegram.ts';
 import { poll, type SourceReport } from '../pipeline/poll.ts';
 import { createHttpClient } from '../sources/http.ts';
 import { SOURCES } from '../sources/index.ts';
+
+const { values: flags } = parseArgs({
+  options: { 'dry-run': { type: 'boolean', default: false } },
+});
 
 try {
   const config = loadConfig();
@@ -26,11 +34,30 @@ try {
   console.log(
     `eligibility: ${changes.length} changed (${count('open')} open, ${count('unknown')} unknown, ${count('closed')} closed)`,
   );
+
+  const messages = renderDigest(collectDigest(db, report.runId, config.profile));
+  if (messages.length === 0) {
+    console.log('digest: nothing new');
+  } else if (!config.telegram || flags['dry-run']) {
+    // Nothing is marked as notified, so the same digest is sent once delivery is configured.
+    console.log(`digest (not sent${config.telegram ? ', --dry-run' : ', no telegram config'}):\n`);
+    for (const m of messages) console.log(`${m.text}\n`);
+  } else {
+    const count = await deliver(db, config.telegram, messages, new Date());
+    console.log(`digest: sent ${messages.length} message(s), ${count} posting(s)`);
+  }
+
   if (report.status === 'failed') process.exitCode = 1;
 } catch (error) {
-  if (!(error instanceof ConfigError)) throw error;
-  console.error(error.message);
-  process.exitCode = 2;
+  if (error instanceof TelegramError) {
+    console.error(error.message);
+    process.exitCode = 1;
+  } else if (error instanceof ConfigError) {
+    console.error(error.message);
+    process.exitCode = 2;
+  } else {
+    throw error;
+  }
 }
 
 function describe(s: SourceReport): string {
