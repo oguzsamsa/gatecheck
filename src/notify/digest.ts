@@ -3,6 +3,7 @@ import type { Config } from '../config.ts';
 import { formatBand } from '../domain/format.ts';
 import type { Db } from '../db/client.ts';
 import {
+  analysis,
   company,
   compensation,
   eligibility,
@@ -21,6 +22,8 @@ export interface DigestItem {
   reason: string;
   salary: string | null;
   belowFloor: boolean;
+  /** Phase-3 reading of the posting, when one exists. */
+  analysis: { fit: string; summary: string; ungrounded: number } | null;
 }
 
 export interface ChangeItem {
@@ -57,10 +60,14 @@ export function collectDigest(db: Db, runId: number, profile: Profile): Digest {
       url: posting.url,
       verdict: eligibility.verdict,
       reason: eligibility.reason,
+      fit: analysis.fit,
+      fitSummary: analysis.summary,
+      ungrounded: analysis.ungroundedCount,
     })
     .from(posting)
     .innerJoin(company, eq(company.id, posting.companyId))
     .innerJoin(eligibility, eq(eligibility.postingId, posting.id))
+    .leftJoin(analysis, eq(analysis.postingId, posting.id))
     .where(
       and(
         isNull(posting.closedAt),
@@ -106,6 +113,9 @@ export function collectDigest(db: Db, runId: number, profile: Profile): Digest {
         reason: r.reason,
         salary: band ? formatBand(band) : null,
         belowFloor: band ? isBelowFloor(band, profile.salaryFloor) : false,
+        analysis: r.fit
+          ? { fit: r.fit, summary: r.fitSummary ?? '', ungrounded: r.ungrounded ?? 0 }
+          : null,
       },
       verdict: r.verdict,
     };

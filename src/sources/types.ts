@@ -29,4 +29,6 @@ export interface BoardSource<Raw = unknown> {
    * `updated_at` the ATS bumps on every save, so a version means a real change.
    */
   fingerprint?(raw: Raw): unknown;
+  /** The posting's full text (description, requirements) as plain text, for analysis. */
+  text?(raw: Raw): string;
 }

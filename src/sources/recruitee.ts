@@ -14,6 +14,7 @@ import { claimsFromEntries, type LocationEntry } from './claims.ts';
 import { fetchValidated, omitKeys } from './fetch.ts';
 import { employmentTypeFromText, periodFromText, toNumber } from './fields.ts';
 import { SourceError } from './http.ts';
+import { htmlToText } from './text.ts';
 import type { BoardSource } from './types.ts';
 
 const NumberLike = z.union([z.number(), z.string()]).nullish();
@@ -40,6 +41,8 @@ const RecruiteeOffer = z.looseObject({
   locations_question_required: z.boolean().nullish(),
   employment_type_code: z.string().nullish(),
   department: z.string().nullish(),
+  description: z.string().nullish(),
+  requirements: z.string().nullish(),
   published_at: z.string().nullish(),
   updated_at: z.string().nullish(),
   salary: z
@@ -97,6 +100,9 @@ export const recruitee: BoardSource<RecruiteeOffer> = {
   },
 
   fingerprint: (offer) => omitKeys(offer, ['updated_at']),
+
+  text: (offer) =>
+    [htmlToText(offer.description), htmlToText(offer.requirements)].filter(Boolean).join('\n\n'),
 };
 
 function locationEntries(offer: RecruiteeOffer): LocationEntry[] {

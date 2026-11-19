@@ -242,3 +242,29 @@ export const postingChange = sqliteTable(
     check('posting_change_kind_ck', oneOf('kind', CHANGE_KINDS)),
   ],
 );
+
+export const FITS = ['strong', 'possible', 'weak'] as const;
+
+/**
+ * The model's reading of one version of a posting. Re-run when the posting changes
+ * (`content_hash` no longer matches its latest version). `result_json` holds the full
+ * structured answer; the draft itself is also written to data/drafts/.
+ */
+export const analysis = sqliteTable(
+  'analysis',
+  {
+    postingId: integer()
+      .primaryKey()
+      .references(() => posting.id, { onDelete: 'cascade' }),
+    contentHash: text().notNull(),
+    model: text().notNull(),
+    analyzedAt: timestamp().notNull(),
+    fit: text({ enum: FITS }).notNull(),
+    summary: text().notNull(),
+    /** Claims whose quote was not found in the profile; non-empty means "review first". */
+    ungroundedCount: integer().notNull(),
+    draftPath: text(),
+    resultJson: text({ mode: 'json' }).notNull(),
+  },
+  () => [check('analysis_fit_ck', oneOf('fit', FITS))],
+);

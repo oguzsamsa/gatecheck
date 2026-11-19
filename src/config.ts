@@ -48,6 +48,20 @@ const ConfigSchema = z.object({
         .optional(),
     })
     .default({ titleKeywords: [] }),
+  /** Phase 3: model-assisted reading of postings that passed the filter. Off unless set. */
+  analysis: z
+    .object({
+      /** Markdown/text describing the applicant — gitignored, never committed. */
+      profileFile: z.string().min(1),
+      model: z.string().default('claude-opus-5-5'),
+      effort: z.enum(['low', 'medium', 'high', 'xhigh', 'max']).default('medium'),
+      /** Most postings analysed per run; each one is a paid API call. */
+      maxPerRun: z.number().int().min(1).default(5),
+      /** Also analyse during `pnpm poll` (before the digest), not only via `pnpm analyze`. */
+      onPoll: z.boolean().default(false),
+      draftsDir: z.string().default('data/drafts'),
+    })
+    .optional(),
   telegram: z
     .object({
       botToken: z.string().min(1),

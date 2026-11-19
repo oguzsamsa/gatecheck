@@ -15,6 +15,7 @@
     "inspect": "node src/cli/inspect.ts",
     "launchd": "node src/cli/launchd.ts",
     "discover": "node src/cli/discover.ts",
+    "analyze": "node src/cli/analyze.ts",
     "db:generate": "drizzle-kit generate",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -24,6 +25,7 @@
     "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "~1.5.0",
     "better-sqlite3": "^13.2.0",
     "drizzle-orm": "^0.45.4",
     "fast-xml-parser": "5.11.2",

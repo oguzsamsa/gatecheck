@@ -13,3 +13,5 @@ config.json
 
 # Private planning notes (reference other projects and personal context).
 PLAN.md
+# Applicant profile fed to the analysis step (phase 3).
+profile.md

@@ -132,6 +132,7 @@ const item = (postingId: number, over: Partial<DigestItem> = {}): DigestItem => 
   reason: 'Türkiye listed — remote',
   salary: null,
   belowFloor: false,
+  analysis: null,
   ...over,
 });
 

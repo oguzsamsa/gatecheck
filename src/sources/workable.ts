@@ -10,6 +10,7 @@ import { z } from 'zod';
 import { claimsFromEntries, type LocationEntry } from './claims.ts';
 import { fetchValidated } from './fetch.ts';
 import { employmentTypeFromText } from './fields.ts';
+import { htmlToText } from './text.ts';
 import type { BoardSource } from './types.ts';
 
 const WorkableLocation = z.looseObject({
@@ -32,6 +33,7 @@ const WorkableJob = z.looseObject({
   city: z.string().nullish(),
   state: z.string().nullish(),
   locations: z.array(WorkableLocation).nullish(),
+  description: z.string().nullish(),
 });
 type WorkableJob = z.infer<typeof WorkableJob>;
 
@@ -57,6 +59,8 @@ export const workable: BoardSource<WorkableJob> = {
       compensation: [],
     };
   },
+
+  text: (job) => htmlToText(job.description),
 };
 
 function locationEntries(job: WorkableJob): LocationEntry[] {

@@ -20,8 +20,11 @@ interface Block {
 }
 
 function itemBlock(item: DigestItem): Block {
+  const fit = item.analysis;
   const extras = [
     item.salary && `💰 ${escape(item.salary)}${item.belowFloor ? ' ⚠️ below your floor' : ''}`,
+    fit &&
+      `🧭 fit: ${fit.fit} — ${escape(fit.summary)}${fit.ungrounded > 0 ? ' ⚠️ draft has unbacked claims' : ' · draft ready'}`,
     `<i>${escape(item.reason)}</i>`,
   ].filter(Boolean);
   return {

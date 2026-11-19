@@ -1,21 +1,53 @@
 {
-  "applicant": { "country": "TR" },
+  "applicant": {
+    "country": "TR"
+  },
   "database": "data/gatecheck.sqlite",
   "watchlist": [
-    { "name": "Codeway", "ats": "ashby", "org": "codeway" },
+    {
+      "name": "Codeway",
+      "ats": "ashby",
+      "org": "codeway"
+    },
     {
       "name": "FunnelFox",
       "ats": "ashby",
       "org": "jobs.funnelfox.com",
       "careersUrl": "https://jobs.funnelfox.com"
     },
-    { "name": "GitLab", "ats": "greenhouse", "org": "gitlab" },
-    { "name": "Spotify", "ats": "lever", "org": "spotify" },
-    { "name": "CyberArrow", "ats": "recruitee", "org": "cyberarrow" }
+    {
+      "name": "GitLab",
+      "ats": "greenhouse",
+      "org": "gitlab"
+    },
+    {
+      "name": "Spotify",
+      "ats": "lever",
+      "org": "spotify"
+    },
+    {
+      "name": "CyberArrow",
+      "ats": "recruitee",
+      "org": "cyberarrow"
+    }
   ],
   "profile": {
     "titleKeywords": ["engineer", "developer"],
-    "salaryFloor": { "amount": 60000, "currency": "EUR", "period": "year" }
+    "salaryFloor": {
+      "amount": 60000,
+      "currency": "EUR",
+      "period": "year"
+    }
   },
-  "telegram": { "botToken": "123456:replace-me", "chatId": "123456789" }
+  "analysis": {
+    "profileFile": "profile.md",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "maxPerRun": 5,
+    "onPoll": false
+  },
+  "telegram": {
+    "botToken": "123456:replace-me",
+    "chatId": "123456789"
+  }
 }

@@ -7,6 +7,9 @@ import { dirname } from 'node:path';
 import { parseArgs } from 'node:util';
 import { ConfigError, loadConfig } from '../config.ts';
 import { openDb } from '../db/client.ts';
+import { claudeAnalyzer } from '../analysis/claude.ts';
+import { readProfile } from '../analysis/profile.ts';
+import { analyzePending, describeReport } from '../analysis/run.ts';
 import { evaluateOpenPostings } from '../eligibility/evaluate.ts';
 import { collectDigest } from '../notify/digest.ts';
 import { renderDigest } from '../notify/render.ts';
@@ -34,6 +37,24 @@ try {
   console.log(
     `eligibility: ${changes.length} changed (${count('open')} open, ${count('unknown')} unknown, ${count('closed')} closed)`,
   );
+
+  // Phase 3, opt-in: read the postings that passed before announcing them.
+  const a = config.analysis;
+  if (a?.onPoll) {
+    const analyzed = await analyzePending(
+      {
+        db,
+        analyzer: claudeAnalyzer({ model: a.model, effort: a.effort }),
+        sources: SOURCES,
+        applicant: config.applicant.country,
+        profile: readProfile(a.profileFile),
+        titleKeywords: config.profile.titleKeywords,
+        draftsDir: a.draftsDir,
+      },
+      { limit: a.maxPerRun },
+    );
+    console.log(describeReport(analyzed));
+  }
 
   const messages = renderDigest(collectDigest(db, report.runId, config.profile));
   if (messages.length === 0) {

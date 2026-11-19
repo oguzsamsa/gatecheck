@@ -10,6 +10,7 @@
 import { z } from 'zod';
 import { claimsFromEntries, kindFromLabel, type LocationEntry } from './claims.ts';
 import { fetchValidated, omitKeys } from './fetch.ts';
+import { htmlToText } from './text.ts';
 import type { BoardSource } from './types.ts';
 
 const GreenhouseJob = z.looseObject({
@@ -49,6 +50,8 @@ export const greenhouse: BoardSource<GreenhouseJob> = {
   },
 
   fingerprint: (job) => omitKeys(job, ['updated_at']),
+
+  text: (job) => htmlToText(job.content),
 };
 
 function locationEntries(job: GreenhouseJob): LocationEntry[] {

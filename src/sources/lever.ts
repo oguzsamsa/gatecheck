@@ -12,6 +12,7 @@ import type { LocationKind } from '../domain/types.ts';
 import { claimsFromEntries, kindFromLabel, type LocationEntry } from './claims.ts';
 import { fetchValidated } from './fetch.ts';
 import { employmentTypeFromText, periodFromText } from './fields.ts';
+import { htmlToText } from './text.ts';
 import type { BoardSource } from './types.ts';
 
 const LeverPosting = z.looseObject({
@@ -28,6 +29,9 @@ const LeverPosting = z.looseObject({
   country: z.string().nullish(),
   workplaceType: z.string().nullish(),
   createdAt: z.number().nullish(),
+  descriptionPlain: z.string().nullish(),
+  lists: z.array(z.looseObject({ text: z.string(), content: z.string() })).nullish(),
+  additionalPlain: z.string().nullish(),
   salaryRange: z
     .looseObject({
       min: z.number().nullish(),
@@ -71,6 +75,15 @@ export const lever: BoardSource<LeverPosting> = {
           : [],
     };
   },
+
+  text: (p) =>
+    [
+      p.descriptionPlain,
+      ...(p.lists ?? []).map((l) => `${l.text}\n${htmlToText(l.content)}`),
+      p.additionalPlain,
+    ]
+      .filter(Boolean)
+      .join('\n\n'),
 };
 
 const WORKPLACE: Record<string, LocationKind> = {

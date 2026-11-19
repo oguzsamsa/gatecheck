@@ -1,6 +1,7 @@
 import type { Compensation, CompensationPeriod, EmploymentType } from '../../domain/types.ts';
 import { claimsFromEntries, kindFromLabel, type LocationEntry } from '../claims.ts';
 import { fetchValidated } from '../fetch.ts';
+import { htmlToText } from '../text.ts';
 import type { BoardSource } from '../types.ts';
 import { AshbyBoard, type AshbyJob } from './schema.ts';
 
@@ -24,6 +25,8 @@ export const ashby: BoardSource<AshbyJob> = {
       compensation: compensation(job),
     };
   },
+
+  text: (job) => job.descriptionPlain ?? htmlToText(job.descriptionHtml),
 };
 
 const EMPLOYMENT_TYPES: Record<string, EmploymentType> = {

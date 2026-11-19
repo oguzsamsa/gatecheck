@@ -42,6 +42,8 @@ export const AshbyJob = z.looseObject({
   isListed: z.boolean().nullish(),
   publishedAt: z.string().nullish(),
   jobUrl: z.string(),
+  descriptionPlain: z.string().nullish(),
+  descriptionHtml: z.string().nullish(),
   compensation: z
     .looseObject({ summaryComponents: z.array(CompensationComponent).nullish() })
     .nullish(),

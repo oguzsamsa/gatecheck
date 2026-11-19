@@ -19,6 +19,7 @@ import { z } from 'zod';
 import type { LocationKind } from '../domain/types.ts';
 import { claimsFromEntries, type LocationEntry } from './claims.ts';
 import { employmentTypeFromText } from './fields.ts';
+import { htmlToText } from './text.ts';
 import { SourceError } from './http.ts';
 import type { BoardSource } from './types.ts';
 
@@ -144,6 +145,8 @@ export const teamtailor: BoardSource<TeamtailorPosting> = {
       compensation: [],
     };
   },
+
+  text: (p) => htmlToText(p.description),
 };
 
 function locationEntries(p: TeamtailorPosting): LocationEntry[] {
