@@ -121,4 +121,24 @@ describe('createHttpClient + robots.txt', () => {
 
     expect(sleep.mock.calls.map((c) => c[0])).toEqual([5000, 5000]);
   });
+
+  it('queues concurrent requests to one host instead of firing them together', async () => {
+    const sleep = vi.fn<(ms: number) => Promise<void>>(() => Promise.resolve());
+    const fetch = respond({
+      'https://busy.example.com/a': () => Response.json({}),
+      'https://busy.example.com/b': () => Response.json({}),
+      'https://busy.example.com/c': () => Response.json({}),
+    });
+    const http = createHttpClient({
+      fetch,
+      sleep,
+      now: () => 0,
+      minIntervalMs: 1000,
+      ignoreRobots: true,
+    });
+
+    await Promise.all(['a', 'b', 'c'].map((p) => http.getJson(`https://busy.example.com/${p}`)));
+
+    expect(sleep.mock.calls.map((c) => c[0])).toEqual([1000, 2000]);
+  });
 });

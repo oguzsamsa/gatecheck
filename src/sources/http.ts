@@ -81,12 +81,13 @@ export function createHttpClient(options: HttpClientOptions = {}): HttpClient {
 
   async function paced(url: URL, robots: Robots) {
     const interval = Math.max(minIntervalMs, (robots.crawlDelay ?? 0) * 1000);
+    // Reserve the slot before sleeping, so concurrent requests to one host queue up
+    // behind each other instead of all reading the same "last" and firing together.
     const last = lastRequestByHost.get(url.host);
-    if (last !== undefined) {
-      const wait = last + interval - now();
-      if (wait > 0) await sleep(wait);
-    }
-    lastRequestByHost.set(url.host, now());
+    const slot = last === undefined ? now() : Math.max(now(), last + interval);
+    lastRequestByHost.set(url.host, slot);
+    const wait = slot - now();
+    if (wait > 0) await sleep(wait);
   }
 
   function robotsFor(url: URL): Promise<Robots> {
@@ -99,7 +100,7 @@ export function createHttpClient(options: HttpClientOptions = {}): HttpClient {
             headers: { 'user-agent': userAgent },
             signal: AbortSignal.timeout(timeoutMs),
           });
-          lastRequestByHost.set(url.host, now());
+          lastRequestByHost.set(url.host, Math.max(now(), lastRequestByHost.get(url.host) ?? 0));
           if (response.ok) return parseRobots(await response.text());
           await response.body?.cancel();
           return response.status >= 500 ? DISALLOW_ALL : ALLOW_ALL;
