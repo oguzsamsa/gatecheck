@@ -44,7 +44,7 @@ export const workable: BoardSource<WorkableJob> = {
 
   fetch(account, ctx) {
     const url = `https://apply.workable.com/api/v1/widget/accounts/${encodeURIComponent(account)}?details=true`;
-    return fetchValidated(ctx, url, WorkableAccount, (data) => data.jobs);
+    return fetchValidated(ctx, url, WorkableAccount, (data) => mergeByShortcode(data.jobs));
   },
 
   normalize(job) {
@@ -62,6 +62,27 @@ export const workable: BoardSource<WorkableJob> = {
 
   text: (job) => htmlToText(job.description),
 };
+
+/**
+ * The widget lists a job once per location — same shortcode, one location each — so a job
+ * open in five countries arrives as five rows. They are one posting: merge them, keeping
+ * the first row and the union of the locations, in order.
+ */
+export function mergeByShortcode(jobs: WorkableJob[]): WorkableJob[] {
+  const merged = new Map<string, WorkableJob>();
+  for (const job of jobs) {
+    const first = merged.get(job.shortcode);
+    if (!first) {
+      merged.set(job.shortcode, { ...job, locations: [...(job.locations ?? [])] });
+      continue;
+    }
+    const seen = new Set(first.locations?.map((l) => JSON.stringify(l)));
+    for (const l of job.locations ?? []) {
+      if (!seen.has(JSON.stringify(l))) first.locations = [...(first.locations ?? []), l];
+    }
+  }
+  return [...merged.values()];
+}
 
 function locationEntries(job: WorkableJob): LocationEntry[] {
   const kind = job.telecommuting ? 'remote_region' : 'office';

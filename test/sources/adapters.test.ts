@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { LocationClaim, NormalizedPosting } from '../../src/domain/types.ts';
+import { mergeByShortcode, workable } from '../../src/sources/workable.ts';
 import { normalizeFixture } from '../helpers/fixtures.ts';
 
 const show = (c: LocationClaim) =>
@@ -69,5 +70,34 @@ describe('recruitee', () => {
     ]);
     expect(p.postedAt?.toISOString()).toMatch(/^\d{4}-\d{2}-\d{2}T/);
     expect(p.employmentType).toBe('full_time');
+  });
+});
+
+describe('workable', () => {
+  it('merges the per-location rows of one job into one posting with every location', () => {
+    const row = (country: string, countryCode: string) => ({
+      shortcode: 'C79D418683',
+      title: 'Senior Go Developer',
+      url: 'https://apply.workable.com/j/C79D418683',
+      telecommuting: true,
+      locations: [{ country, countryCode, city: '', region: null, hidden: false }],
+    });
+    const other = { ...row('Poland', 'PL'), shortcode: 'OTHER', title: 'Designer' };
+    const jobs = mergeByShortcode([
+      row('Georgia', 'GE'),
+      row('Armenia', 'AM'),
+      other,
+      row('Armenia', 'AM'),
+      row('Türkiye', 'TR'),
+    ]);
+
+    expect(jobs.map((j) => j.shortcode)).toEqual(['C79D418683', 'OTHER']);
+    const [merged] = jobs;
+    if (!merged) throw new Error('no job');
+    expect(workable.normalize(merged).locations.map((l) => l.countryCode)).toEqual([
+      'GE',
+      'AM',
+      'TR',
+    ]);
   });
 });
